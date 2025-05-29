@@ -3,7 +3,7 @@
 Modern ve responsive kişisel portfolio websitesi. React, Tailwind CSS ve Framer Motion ile geliştirilmiştir.
 
 ## 🌐 Live Demo
-🔗 **[https://alialtunogluportfolio.netlify.app](https://alialtunogluportfolio.netlify.app)** *(yakında)*
+🔗 **[https://alialtunoglu.netlify.app](https://alialtunoglu.netlify.app)** *(yakında)*
 
 ## 🚀 Özellikler
 
@@ -77,7 +77,7 @@ Portfolio, GitHub GraphQL API kullanarak pinlenmiş projelerinizi otomatik olara
 - ✅ Star, fork, dil bilgileri otomatik
 - ✅ Fallback sistem (API çalışmazsa static veriler)
 
-## 🎨 Kustomizasyon
+## 🎨 Kişiselleştirme
 
 ### Renkler
 `tailwind.config.js` dosyasından tema renklerini değiştirebilirsiniz.
