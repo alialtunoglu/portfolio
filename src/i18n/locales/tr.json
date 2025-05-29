@@ -75,11 +75,18 @@
         "tags": ["Veri Analizi", "Python", "Machine Learning", "Bootcamp"]
       },
       "akbank-bootcamp2": {
-        "title": "Akbank Advanced AI Bootcamp",
+        "title": "Akbank Deep Learning Bootcamp",
         "issuer": "Global AI Hub",
         "date": "2024", 
-        "description": "İleri düzey yapay zeka tekniklerini, derin öğrenme modellerini ve büyük veri işleme yöntemlerini kapsayan kapsamlı eğitim programı.",
+        "description": "Derin öğrenme modellerini, büyük veri işleme yöntemlerini ve Python programlama konularında yoğun bootcamp programı.",
         "tags": ["Deep Learning", "Yapay Zeka", "Büyük Veri", "Advanced AI"]
+      },
+      "btk-akademi": {
+        "title": "Django ile Web Geliştirme",
+        "issuer": "BTK Akademi",
+        "date": "2024",
+        "description": "Django ile Restful API geliştirme ve web tabanlı uygulamalar geliştirme",
+        "tags": ["Django", "Restful API", "Web Geliştirme"]
       }
     },
     "stats": {

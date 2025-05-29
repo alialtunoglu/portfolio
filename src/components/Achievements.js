@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, EffectCoverflow, Keyboard } from 'swiper/modules';
 import { FaAward, FaCertificate, FaGraduationCap, FaLinkedin, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 // Import Swiper styles
@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
+import 'swiper/css/keyboard';
 
 // Import certificate data
 import { certificates, certificateStats } from '../data/certificates';
@@ -44,9 +45,15 @@ const Achievements = () => {
           className="relative mb-16"
         >
           <Swiper
-            modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+            modules={[Navigation, Pagination, Autoplay, EffectCoverflow, Keyboard]}
             spaceBetween={30}
             slidesPerView={1}
+            loop={true}
+            centeredSlides={true}
+            keyboard={{
+              enabled: true,
+              onlyInViewport: true,
+            }}
             navigation={{
               prevEl: '.swiper-button-prev-custom',
               nextEl: '.swiper-button-next-custom',
@@ -56,12 +63,15 @@ const Achievements = () => {
               dynamicBullets: true,
             }}
             autoplay={{
-              delay: 4000,
+              delay: 3000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              reverseDirection: false,
             }}
+            speed={800}
             effect="coverflow"
             coverflowEffect={{
-              rotate: 50,
+              rotate: 30,
               stretch: 0,
               depth: 100,
               modifier: 1,
@@ -75,10 +85,12 @@ const Achievements = () => {
               768: {
                 slidesPerView: 2,
                 spaceBetween: 30,
+                centeredSlides: false,
               },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 30,
+                centeredSlides: false,
               },
             }}
             className="certificates-swiper !pb-16"
@@ -151,11 +163,11 @@ const Achievements = () => {
           </Swiper>
 
           {/* Custom Navigation Buttons */}
-          <div className="swiper-button-prev-custom absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110">
-            <FaChevronLeft className="text-white text-lg" />
+          <div className="swiper-button-prev-custom absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-gray-800/90 hover:bg-blue-600/90 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 shadow-lg border border-gray-600/50 hover:border-blue-500/50">
+            <FaChevronLeft className="text-white text-sm md:text-lg" />
           </div>
-          <div className="swiper-button-next-custom absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110">
-            <FaChevronRight className="text-white text-lg" />
+          <div className="swiper-button-next-custom absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-gray-800/90 hover:bg-blue-600/90 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 shadow-lg border border-gray-600/50 hover:border-blue-500/50">
+            <FaChevronRight className="text-white text-sm md:text-lg" />
           </div>
         </motion.div>
 
@@ -213,15 +225,40 @@ const Achievements = () => {
         .certificates-swiper .swiper-pagination-bullet {
           background: rgba(59, 130, 246, 0.5) !important;
           opacity: 0.7 !important;
+          width: 10px !important;
+          height: 10px !important;
+          transition: all 0.3s ease !important;
         }
         
         .certificates-swiper .swiper-pagination-bullet-active {
           background: rgb(59, 130, 246) !important;
           opacity: 1 !important;
+          transform: scale(1.2) !important;
         }
         
         .certificates-swiper .swiper-slide {
           height: auto !important;
+          transition: transform 0.3s ease !important;
+        }
+        
+        .certificates-swiper .swiper-slide-active {
+          z-index: 2 !important;
+        }
+        
+        .certificates-swiper .swiper-slide:hover {
+          transform: translateY(-5px) !important;
+        }
+        
+        .swiper-button-prev-custom:hover,
+        .swiper-button-next-custom:hover {
+          box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3) !important;
+        }
+        
+        @media (max-width: 768px) {
+          .certificates-swiper .swiper-pagination-bullet {
+            width: 8px !important;
+            height: 8px !important;
+          }
         }
       `}</style>
     </section>

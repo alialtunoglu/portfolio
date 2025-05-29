@@ -2,6 +2,7 @@
 import sanayiLogo from '../assets/sanayi.png';
 import techcareerLogo from '../assets/techcareer.png';
 import globalaihubLogo from '../assets/globalaihub.png';
+import btkLogo from '../assets/btkakademi.png';
 
 export const certificates = [
   {
@@ -23,6 +24,11 @@ export const certificates = [
     id: 'akbank-bootcamp2',
     logo: globalaihubLogo,
     link: "https://courses.10million.ai/saas-certificate/12D0849A0-12D0849A2-2F3B396/"
+  },
+  {
+    id: 'btk-akademi',
+    logo: btkLogo,
+    link: "https://www.linkedin.com/in/alialtunoglu/details/certifications/"
   }
   // Yeni sertifikalar eklemek için buraya ekleme yapabilirsiniz
   // {
