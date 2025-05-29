@@ -43,7 +43,9 @@
     "title": "Açık Kaynak Projeler",
     "subtitle": "Toplulukla paylaştığım açık kaynak projelerim ve katkılarım",
     "viewAll": "Tüm Projelerimi Gör",
-    "updated": "Güncellendi"
+    "updated": "Güncellendi",
+    "view": "Görüntüle"
+    
   },
   "achievements": {
     "title": "Başarılar ve Sertifikalar",
@@ -146,11 +148,12 @@
     "major": "Yazılım Mühendisliği",
     "subtitle": "Akademik geçmişim ve eğitim hayatım",
     "description": "Bilgisayar Mühendisliği bölümünde yazılım geliştirme, algoritma tasarımı, veri yapıları ve makine öğrenmesi konularında derinlemesine eğitim alıyorum. Özellikle AI/ML alanında projelere odaklanarak akademik başarımı artırıyorum.",
-    "courses": "Ana Dersler",
+
     "projects": {
       "title": "Akademik Projeler",
       "projects": [
-        "Makine Öğrenmesi ile Görüntü Sınıflandırma",
+        "Mobil Sosyal Medya Uygulaması",
+        "Görüntü Sınıflandırma ve Model Optimizasyonu",
         "Alzheimer'ın Erken Tanısı için Makine Öğrenmesi"
       ]
     },

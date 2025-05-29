@@ -60,7 +60,7 @@ const Education = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
                         <FaCalendar className="text-sm" />
-                        <span>2021 - Günümüz</span>
+                        <span>2021 - 2025</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <FaMapMarker className="text-sm" />
@@ -86,31 +86,7 @@ const Education = () => {
                 </p>
               </div>
 
-              {/* Key Courses */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold text-white mb-4 text-center lg:text-left">
-                  {t('education.courses')}
-                </h4>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                  {[
-                    "Veri Yapıları",
-                    "Algoritma Analizi", 
-                    "Makine Öğrenmesi",
-                    "Veritabanı Sistemleri",
-                    "Web Programlama",
-                    "Nesne Yönelimli Programlama",
-                    "Yazılım Mühendisliği",
-                    "Bilgisayar Ağları"
-                  ].map((course) => (
-                    <div
-                      key={course}
-                      className="px-3 py-2 bg-blue-500/20 text-blue-400 text-sm rounded-lg text-center border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-300"
-                    >
-                      {course}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              
 
               {/* Activities */}
               <div className="grid md:grid-cols-2 gap-6">
@@ -144,7 +120,7 @@ const Education = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-blue-400 mb-2">4+</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
             <div className="text-gray-400 text-sm">{t('education.stats.education')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">

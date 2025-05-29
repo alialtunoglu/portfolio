@@ -185,7 +185,7 @@ const OpenSourceProjects = () => {
                     className="flex items-center gap-2 px-3 py-1 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-300"
                   >
                     <FaGithub className="text-xs" />
-                    View
+                    {t('projects.view')}
                   </a>
                 </div>
               </div>

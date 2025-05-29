@@ -38,12 +38,14 @@
     "description": "My open source projects and contributions shared with the community",
     "viewAllProjects": "View All Projects",
     "updated": "Updated"
+    
   },
   "projects": {
     "title": "Open Source Projects",
     "subtitle": "My open source projects and contributions shared with the community",
     "viewAll": "View All Projects",
-    "updated": "Updated"
+    "updated": "Updated",
+    "view": "View"
   },
   "achievements": {
     "title": "Achievements & Certifications",
@@ -150,7 +152,8 @@
     "projects": {
       "title": "Academic Projects",
       "projects": [
-        "Image Classification with Machine Learning",
+        "Mobile Social Media Application",
+        "Image Classification and Model Optimization",
         "Alzheimer's Disease Detection with Machine Learning"
       ]
     },

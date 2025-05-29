@@ -26,7 +26,7 @@ const Skills = () => {
     {
       category: "Database Systems",
       icon: FaDatabase,
-      percentage: 82,
+      percentage: 85,
       color: "from-orange-500 to-red-500",
       description: "Veritabanı tasarımı ve optimizasyonu",
       details: ["MySQL", "MongoDB", "PostgreSQL", "MsSQL", "Redis", "Database Design"]
@@ -34,7 +34,7 @@ const Skills = () => {
     {
       category: "Cloud & DevOps",
       icon: FaCloud,
-      percentage: 78,
+      percentage: 75,
       color: "from-indigo-500 to-blue-500",
       description: "Bulut teknolojileri ve sürekli entegrasyon",
       details: ["Azure", "Docker", "Kubernetes", "CI/CD", "Git", "Linux"]
@@ -156,7 +156,7 @@ const Skills = () => {
                 <span className="text-gray-400">{t('skills.languages.intermediate')}</span>
               </div>
               <div className="w-full bg-gray-700/50 rounded-full h-2">
-                <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                <div className="w-2/4 h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
               </div>
             </div>
           </div>
