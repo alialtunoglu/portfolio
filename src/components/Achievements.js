@@ -55,11 +55,11 @@ const Achievements = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group"
+              className="group h-full"
             >
-              <div className="h-full p-8 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
-                {/* Header */}
-                <div className="text-center mb-6">
+              <div className="flex flex-col h-full p-8 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
+                {/* Header - Fixed Height */}
+                <div className="text-center mb-6 flex-shrink-0">
                   <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
                     <img 
                       src={achievement.logo} 
@@ -67,7 +67,7 @@ const Achievements = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2 min-h-[3rem] flex items-center justify-center">
                     {t(`achievements.certificates.${achievement.id}.title`)}
                   </h3>
                   <p className="text-blue-400 font-medium mb-1">
@@ -78,13 +78,15 @@ const Achievements = () => {
                   </p>
                 </div>
 
-                {/* Description */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-6 text-center">
-                  {t(`achievements.certificates.${achievement.id}.description`)}
-                </p>
+                {/* Description - Flexible Height */}
+                <div className="flex-grow mb-6">
+                  <p className="text-gray-300 text-sm leading-relaxed text-center">
+                    {t(`achievements.certificates.${achievement.id}.description`)}
+                  </p>
+                </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                {/* Tags - Fixed Section */}
+                <div className="flex flex-wrap gap-2 mb-6 justify-center min-h-[2.5rem] items-start">
                   {t(`achievements.certificates.${achievement.id}.tags`, { returnObjects: true }).map((tag) => (
                     <span
                       key={tag}
@@ -95,8 +97,8 @@ const Achievements = () => {
                   ))}
                 </div>
 
-                {/* Action Button */}
-                <div className="text-center">
+                {/* Action Button - Fixed at Bottom */}
+                <div className="text-center flex-shrink-0">
                   <a
                     href={achievement.link}
                     target="_blank"

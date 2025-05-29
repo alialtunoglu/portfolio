@@ -1,0 +1,37 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" fill="#111827" rx="96"/>
+  
+  <!-- Outer Ring -->
+  <rect x="32" y="32" width="448" height="448" fill="url(#outerGradient)" rx="96" transform="rotate(12 256 256)"/>
+  
+  <!-- Inner Background -->
+  <rect x="48" y="48" width="416" height="416" fill="#111827" rx="64"/>
+  
+  <!-- AA Text -->
+  <text x="256" y="320" 
+        font-family="Arial, sans-serif" 
+        font-size="192" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="url(#textGradient)"
+        filter="url(#glow)">AA</text>
+</svg> 

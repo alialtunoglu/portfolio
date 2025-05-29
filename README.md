@@ -1,25 +1,47 @@
-# Portfolio Website
+# Ali Altunoğlu - Portfolio Website
 
 Modern ve responsive kişisel portfolio websitesi. React, Tailwind CSS ve Framer Motion ile geliştirilmiştir.
 
 ## 🌐 Live Demo
 🔗 **[https://alialtunoglu.netlify.app](https://alialtunoglu.netlify.app)** *(yakında)*
 
+## 📸 Uygulama Görselleri
+
+### Ana Sayfa & Hero Section
+![Ana Sayfa](src/assets/1.png)
+*Modern hero section ile karşılama, animasyonlu yazılar ve sosyal medya linkler*
+
+### Projeler & Başarılar
+![Projeler](src/assets/2.png)
+*GitHub entegrasyonu ile dinamik projeler ve sertifika başarıları*
+
+### Deneyim & Yetenekler
+![Deneyim](src/assets/3.png)
+*Profesyonel deneyim timeline'ı ve interaktif yetenek çubukları*
+
+### İletişim & Responsive Tasarım
+![İletişim](src/assets/4.png)
+*Modern iletişim formu ve tüm cihazlarda mükemmel responsive görünüm*
+
 ## 🚀 Özellikler
 
-- **Dinamik GitHub Entegrasyonu**: GitHub API ile pinlenmiş projelerinizi otomatik olarak çeker
-- **Çok Dilli Destek**: Türkçe ve İngilizce dil seçenekleri
-- **Modern Tasarım**: Dark theme, gradient renkler ve animasyonlar
-- **Responsive**: Tüm cihazlarda mükemmel görünüm
-- **Performant**: Optimized loading ve smooth animations
+- **🎨 Modern UI/UX**: Dark theme, gradient renkler ve glassmorphism efektleri
+- **🌐 Dinamik GitHub Entegrasyonu**: GitHub API ile pinlenmiş projelerinizi otomatik olarak çeker
+- **🌍 Çok Dilli Destek**: Türkçe ve İngilizce dil seçenekleri
+- **📱 Tam Responsive**: Tüm cihazlarda mükemmel görünüm
+- **⚡ Performant**: Optimized loading ve smooth animations
+- **🎭 Interaktif Animasyonlar**: Framer Motion ile akıcı geçişler
+- **📧 Çalışan İletişim Formu**: Form doğrulama ve geri bildirim
+- **🏆 Sertifika Vitrin**: Başarılar ve sertifikaları görsel olarak sergileme
 
 ## 📦 Teknolojiler
 
-- React 19
-- Tailwind CSS
-- Framer Motion
-- React i18next
-- GitHub GraphQL API
+- **Frontend**: React 19, Tailwind CSS, Framer Motion
+- **Internationalization**: React i18next
+- **API**: GitHub GraphQL API
+- **Icons**: React Icons
+- **Build Tool**: Create React App
+- **Deployment**: Netlify
 
 ## 🛠️ Kurulum
 
@@ -31,7 +53,7 @@ cd portfolio
 
 2. Bağımlılıkları yükleyin:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 3. Environment variables oluşturun:
@@ -55,17 +77,56 @@ npm start
    - `repo`
 4. Token'ı kopyalayın ve `.env` dosyasına ekleyin
 
-## 📱 Bölümler
+## 📱 Portfolio Bölümleri
 
-- **Hero Section**: Karşılama ve tanıtım
-- **About**: Kullandığım teknolojiler ve hizmetler
-- **Projects**: GitHub'dan dinamik olarak çekilen pinlenmiş projeler
-- **Achievements**: Sertifikalar ve başarılar
-- **Blog**: Medium yazıları
-- **Experience**: Profesyonel deneyim
-- **Skills**: Teknik yetkinlikler
-- **Education**: Eğitim geçmişi
-- **Contact**: İletişim formu ve bilgileri
+### 🏠 Hero Section
+- Animated greeting ve tanıtım
+- Call-to-action butonları
+- Sosyal medya linkeri
+- Typing effect animasyonu
+
+### 👨‍💻 About (What I Do)
+- Kullandığım teknolojiler
+- Sunduğum hizmetler
+- Interaktif teknoloji iconları
+
+### 🚀 Projects
+- GitHub'dan dinamik proje çekimi
+- Star, fork, dil bilgileri
+- Fallback static projeler
+- Live demo ve GitHub linkeri
+
+### 🏆 Achievements
+- Sertifikalar ve başarılar
+- Eğitim istatistikleri
+- LinkedIn entegrasyonu
+- Görsel sertifika kartları
+
+### 📝 Blog
+- Medium yazı listesi
+- Read time ve stats
+- External linkler
+
+### 💼 Experience
+- Timeline tasarım
+- Şirket logoları
+- Detaylı iş tanımları
+
+### 🎯 Skills
+- Animated progress bars
+- Teknik yetenek grid
+- Kategorize edilmiş yetenekler
+
+### 🎓 Education
+- Üniversite bilgileri
+- GPA ve projeler
+- Kurslar listesi
+
+### 📞 Contact
+- İletişim bilgileri
+- Çalışan contact form
+- Sosyal medya linkeri
+- Quick response info
 
 ## 🌟 Dinamik GitHub Entegrasyonu
 
@@ -93,10 +154,23 @@ Framer Motion animasyonları her component'te özelleştirilebilir.
 ```
 src/
 ├── components/          # React componentleri
+│   ├── HeroSection.js
+│   ├── WhatIDo.js
+│   ├── OpenSourceProjects.js
+│   ├── Achievements.js
+│   ├── Blogs.js
+│   ├── Experience.js
+│   ├── Skills.js
+│   ├── Education.js
+│   ├── Contact.js
+│   ├── Navbar.js
+│   ├── Logo.js
+│   └── ScrollToTopButton.js
 ├── hooks/              # Custom hooks
 ├── i18n/               # Çeviri dosyaları
 ├── assets/             # Resim ve diğer assets
-└── data/               # Static data dosyaları
+├── data/               # Static data dosyaları
+└── App.js              # Ana uygulama
 ```
 
 ## 🚀 Deployment
@@ -181,9 +255,11 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 ## 👨‍💻 Geliştirici
 
 **Ali Altunoğlu**
-- GitHub: [@alialtunoglu](https://github.com/alialtunoglu)
-- LinkedIn: [Ali Altunoğlu](https://linkedin.com/in/alialtunoglu)
-- Medium: [@alialtunoglu](https://medium.com/@alialtunoglu)
+- 🌐 Website: [Portfolio](https://alialtunoglu-portfolio.netlify.app)
+- 💼 GitHub: [@alialtunoglu](https://github.com/alialtunoglu)
+- 💼 LinkedIn: [Ali Altunoğlu](https://linkedin.com/in/alialtunoglu)
+- 📝 Medium: [@alialtunoglu](https://medium.com/@alialtunoglu)
+- 📧 Email: alialtunoglu.dev@gmail.com
 
 ---
 

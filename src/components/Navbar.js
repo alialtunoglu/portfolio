@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
+import Logo from './Logo';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -90,9 +91,9 @@ const Navbar = () => {
           >
             <button
               onClick={() => scrollToSection('#hero')}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent"
+              className="focus:outline-none"
             >
-              Ali Altunoğlu
+              <Logo />
             </button>
           </motion.div>
 
