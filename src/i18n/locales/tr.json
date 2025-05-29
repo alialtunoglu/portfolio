@@ -73,6 +73,13 @@
         "date": "2024",
         "description": "Veri analizi, makine öğrenmesi ve Python programlama konularında yoğun bootcamp programı.",
         "tags": ["Veri Analizi", "Python", "Machine Learning", "Bootcamp"]
+      },
+      "akbank-bootcamp2": {
+        "title": "Akbank Advanced AI Bootcamp",
+        "issuer": "Global AI Hub",
+        "date": "2024", 
+        "description": "İleri düzey yapay zeka tekniklerini, derin öğrenme modellerini ve büyük veri işleme yöntemlerini kapsayan kapsamlı eğitim programı.",
+        "tags": ["Deep Learning", "Yapay Zeka", "Büyük Veri", "Advanced AI"]
       }
     },
     "stats": {
@@ -86,6 +93,7 @@
     "subtitle": "Teknik yazılarım ve deneyimlerimi paylaştığım blog yazıları",
     "readTime": "dk okuma",
     "moreContent": "Daha Fazla İçerik",
+    "description": "AI, backend geliştirme ve teknoloji trendleri hakkında düzenli olarak yazılar paylaşıyorum.",
     "followMedium": "Medium'da Takip Et",
     "viewAll": "Tüm Yazıları Gör",
     "stats": {

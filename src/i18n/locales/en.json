@@ -73,6 +73,13 @@
         "date": "2024",
         "description": "Intensive bootcamp program on data analysis, machine learning and Python programming.",
         "tags": ["Data Analysis", "Python", "Machine Learning", "Bootcamp"]
+      },
+      "akbank-bootcamp2": {
+        "title": "Akbank Advanced AI Bootcamp",
+        "issuer": "Global AI Hub",
+        "date": "2024",
+        "description": "Comprehensive training program covering advanced artificial intelligence techniques, deep learning models, and big data processing methods.",
+        "tags": ["Deep Learning", "Artificial Intelligence", "Big Data", "Advanced AI"]
       }
     },
     "stats": {
@@ -86,6 +93,7 @@
     "subtitle": "My technical articles and blog posts where I share my experiences",
     "readTime": "min read",
     "moreContent": "More Content",
+    "description": "I regularly share articles on AI, backend development, and technology trends.",
     "followMedium": "Follow on Medium",
     "viewAll": "View All Posts",
     "stats": {

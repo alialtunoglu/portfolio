@@ -29,8 +29,8 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: t('contact.phone'),
-      value: '+90 555 123 4567',
-      link: 'tel:+905551234567'
+      value: '+90 553 543 0543',
+      link: 'tel:+905535430543'
     },
     {
       icon: FaMapMarkerAlt,

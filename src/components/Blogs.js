@@ -184,7 +184,7 @@ const Blogs = () => {
                   {t('blogs.moreContent')}
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  AI, backend geliştirme ve teknoloji trendleri hakkında düzenli olarak yazılar paylaşıyorum.
+                  {t('blogs.description')}
                 </p>
               </div>
               

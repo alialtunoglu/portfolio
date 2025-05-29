@@ -37,6 +37,12 @@ function App() {
           <div id="whatido">
             <WhatIDo />
           </div>
+          <div id="education">
+            <Education />
+          </div>
+          <div id="experience">
+            <Experience />
+          </div>
           <div id="projects">
             <OpenSourceProjects />
           </div>
@@ -45,12 +51,6 @@ function App() {
           </div>
           <div id="blogs">
             <Blogs />
-          </div>
-          <div id="education">
-            <Education />
-          </div>
-          <div id="experience">
-            <Experience />
           </div>
           <div id="skills">
             <Skills />
