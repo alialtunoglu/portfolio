@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -7,6 +7,8 @@ import {
   FaMobile,
   FaCloud,
   FaMicrosoft,
+  FaChevronDown,
+  FaChevronUp
 } from 'react-icons/fa';
 import { 
   SiDjango, 
@@ -31,6 +33,26 @@ import {
 const WhatIDo = () => {
   const { t } = useTranslation();
   const [hoveredTech, setHoveredTech] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile and set first category expanded
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+      
+      // Set first category expanded by default on mobile
+      if (mobile && Object.keys(expandedCategories).length === 0) {
+        setExpandedCategories({ 'AI/ML': true });
+      }
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [expandedCategories]);
 
   const technologies = [
     // AI/ML Technologies
@@ -216,6 +238,16 @@ const WhatIDo = () => {
     'Cloud & DevOps': 'from-indigo-500 to-blue-500',
   };
 
+  // Toggle category expansion on mobile
+  const toggleCategory = (category) => {
+    if (isMobile) {
+      setExpandedCategories(prev => ({
+        ...prev,
+        [category]: !prev[category]
+      }));
+    }
+  };
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -246,6 +278,17 @@ const WhatIDo = () => {
             {t('whatido.technologies')}
           </h3>
           
+          {/* Mobile hint */}
+          {isMobile && (
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center text-gray-400 text-sm mb-6"
+            >
+              Kategorilere dokunarak teknolojileri görün
+            </motion.p>
+          )}
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {Object.entries(groupedTechnologies).map(([category, techs], categoryIndex) => (
               <motion.div
@@ -256,52 +299,74 @@ const WhatIDo = () => {
                 viewport={{ once: true }}
                 className="p-6 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
               >
-                {/* Category Header */}
-                <div className="flex items-center gap-3 mb-6">
+                {/* Category Header - Clickable on mobile */}
+                <div 
+                  className="flex items-center gap-3 mb-6 lg:cursor-default cursor-pointer lg:pointer-events-none"
+                  onClick={() => toggleCategory(category)}
+                >
                   <div className={`h-1 w-8 bg-gradient-to-r ${categoryColors[category]} rounded-full`}></div>
-                  <h4 className="text-lg font-semibold text-gray-200">{category}</h4>
-                  <div className={`h-1 flex-1 bg-gradient-to-r ${categoryColors[category]} rounded-full opacity-30`}></div>
+                  <h4 className="text-lg font-semibold text-gray-200 flex-none">{category}</h4>
+                  <div className={`h-1 flex-1 bg-gradient-to-r ${categoryColors[category]} rounded-full opacity-30 hidden lg:block`}></div>
+                  
+                  {/* Mobile toggle icon */}
+                  <div className="lg:hidden">
+                    {expandedCategories[category] ? (
+                      <FaChevronUp className="text-gray-400 text-sm" />
+                    ) : (
+                      <FaChevronDown className="text-gray-400 text-sm" />
+                    )}
+                  </div>
                 </div>
                 
-                {/* Technology Icons Grid */}
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {techs.map((tech, index) => (
-                    <motion.a
-                      key={tech.name}
-                      href={tech.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.05 }}
-                      viewport={{ once: true }}
-                      onMouseEnter={() => setHoveredTech(tech)}
-                      onMouseLeave={() => setHoveredTech(null)}
-                      className="relative group cursor-pointer"
-                    >
-                      <div className={`w-16 h-16 bg-gray-800/50 hover:bg-gradient-to-r hover:${categoryColors[category]} hover:bg-opacity-20 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600 flex flex-col items-center justify-center p-2`}>
-                        <tech.icon className="text-xl text-gray-300 group-hover:text-white transition-colors duration-300" />
-                        <p className="text-xs text-gray-400 group-hover:text-gray-200 mt-1 transition-colors duration-300 text-center line-clamp-1 truncate w-full">
-                          {tech.name}
-                        </p>
-                      </div>
-                      
-                      {/* Tooltip */}
-                      {hoveredTech === tech && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.9 }}
-                          className="absolute -top-24 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-20 w-48 text-center border border-gray-600"
-                        >
-                          <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
-                          <p className="text-xs text-gray-300">{tech.description}</p>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
-                        </motion.div>
-                      )}
-                    </motion.a>
-                  ))}
-                </div>
+                {/* Technology Icons Grid - Collapsible on mobile */}
+                <motion.div
+                  className="overflow-hidden"
+                  initial={false}
+                  animate={{
+                    height: !isMobile ? 'auto' : (expandedCategories[category] ? 'auto' : 0),
+                    opacity: !isMobile ? 1 : (expandedCategories[category] ? 1 : 0)
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 pt-2 lg:pt-0">
+                    {techs.map((tech, index) => (
+                      <motion.a
+                        key={tech.name}
+                        href={tech.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        onMouseEnter={() => setHoveredTech(tech)}
+                        onMouseLeave={() => setHoveredTech(null)}
+                        className="relative group cursor-pointer"
+                      >
+                        <div className={`w-16 h-16 bg-gray-800/50 hover:bg-gradient-to-r hover:${categoryColors[category]} hover:bg-opacity-20 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600 flex flex-col items-center justify-center p-2`}>
+                          <tech.icon className="text-xl text-gray-300 group-hover:text-white transition-colors duration-300" />
+                          <p className="text-xs text-gray-400 group-hover:text-gray-200 mt-1 transition-colors duration-300 text-center line-clamp-1 truncate w-full">
+                            {tech.name}
+                          </p>
+                        </div>
+                        
+                        {/* Tooltip */}
+                        {hoveredTech === tech && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                            className="absolute -top-24 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-20 w-48 text-center border border-gray-600"
+                          >
+                            <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
+                            <p className="text-xs text-gray-300">{tech.description}</p>
+                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                          </motion.div>
+                        )}
+                      </motion.a>
+                    ))}
+                  </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>

@@ -110,7 +110,7 @@ const OpenSourceProjects = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="h-full p-6 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="h-full p-6 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-2 min-w-0 flex-1">
@@ -129,52 +129,55 @@ const OpenSourceProjects = () => {
                   </a>
                 </div>
 
-                {/* Description */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+                {/* Content - flex-1 to take available space */}
+                <div className="flex-1 flex flex-col">
+                  {/* Description */}
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
 
-                {/* Topics */}
-                {project.topics && project.topics.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.topics.slice(0, 3).map((topic) => (
-                      <span
-                        key={topic}
-                        className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30"
-                      >
-                        {topic}
-                      </span>
-                    ))}
-                    {project.topics.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-600/30 text-gray-400 text-xs rounded-full border border-gray-600/30">
-                        +{project.topics.length - 3}
-                      </span>
-                    )}
-                  </div>
-                )}
+                  {/* Topics */}
+                  {project.topics && project.topics.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.topics.slice(0, 3).map((topic) => (
+                        <span
+                          key={topic}
+                          className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                      {project.topics.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-600/30 text-gray-400 text-xs rounded-full border border-gray-600/30">
+                          +{project.topics.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  )}
 
-                {/* Stats */}
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <div 
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: project.languageColor }}
-                    ></div>
-                    <span>{project.language}</span>
+                  {/* Stats */}
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <div 
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: project.languageColor }}
+                      ></div>
+                      <span>{project.language}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaStar className="text-xs" />
+                      <span>{project.stars}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaCodeBranch className="text-xs" />
+                      <span>{project.forks}</span>
+                    </div>
+                    <span className="text-xs">{project.size}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-xs" />
-                    <span>{project.stars}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <FaCodeBranch className="text-xs" />
-                    <span>{project.forks}</span>
-                  </div>
-                  <span className="text-xs">{project.size}</span>
                 </div>
 
-                {/* Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
+                {/* Footer - always at bottom */}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-700/50 mt-auto">
                   <span className="text-xs text-gray-500">
                     {t('openSourceProjects.updated')} {project.lastUpdated}
                   </span>

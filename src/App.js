@@ -12,7 +12,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import FloatingContactButton from './components/FloatingContactButton';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -60,7 +60,7 @@ function App() {
           </div>
         </motion.div>
         
-        <FloatingContactButton />
+        <ScrollToTopButton />
       </div>
     </div>
   );
