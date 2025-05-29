@@ -86,7 +86,8 @@ const Experience = () => {
                           <h3 className="text-xl font-bold text-white mb-1">
                             {t(`experience.companies.${exp.id}.position`)}
                           </h3>
-                          {t(`experience.companies.${exp.id}.prevPosition`, { returnObjects: true }) && (
+                          {/* Show promotion info only if prevPosition exists */}
+                          {t(`experience.companies.${exp.id}.prevPosition`, { defaultValue: '' }) && (
                             <div className="mb-2">
                               <div className="text-sm text-gray-400 italic">
                                 {t('experience.promoted')}: {t(`experience.companies.${exp.id}.prevPosition`)}
@@ -104,7 +105,8 @@ const Experience = () => {
                             </div>
                             <span>{exp.location}</span>
                           </div>
-                          {t(`experience.companies.${exp.id}.prevPeriod`, { returnObjects: true }) && (
+                          {/* Show internship period only if prevPeriod exists */}
+                          {t(`experience.companies.${exp.id}.prevPeriod`, { defaultValue: '' }) && (
                             <div className="flex items-center gap-4 text-xs text-gray-500 mt-1">
                               <div className="flex items-center gap-1">
                                 <FaCalendar className="text-xs" />
@@ -154,28 +156,28 @@ const Experience = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-20 grid grid-cols-3 gap-3 md:gap-8"
         >
-          <div className="text-center p-6 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-2xl border border-blue-500/20">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaBuilding className="text-2xl text-blue-400" />
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-xl md:rounded-2xl border border-blue-500/20">
+            <div className="w-8 h-8 md:w-16 md:h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-4">
+              <FaBuilding className="text-sm md:text-2xl text-blue-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">1+</h3>
-            <p className="text-gray-300">{t('experience.stats.experience')}</p>
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">1+</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('experience.stats.experience')}</p>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl border border-purple-500/20">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaCode className="text-2xl text-purple-400" />
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-xl md:rounded-2xl border border-purple-500/20">
+            <div className="w-8 h-8 md:w-16 md:h-16 bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-4">
+              <FaCode className="text-sm md:text-2xl text-purple-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">7+</h3>
-            <p className="text-gray-300">{t('experience.stats.projects')}</p>
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">7+</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('experience.stats.projects')}</p>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-2xl border border-green-500/20">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🚀</span>
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-xl md:rounded-2xl border border-green-500/20">
+            <div className="w-8 h-8 md:w-16 md:h-16 bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-4">
+              <span className="text-sm md:text-2xl">🚀</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">3</h3>
-            <p className="text-gray-300">{t('experience.stats.companies')}</p>
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">3</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('experience.stats.companies')}</p>
           </div>
         </motion.div>
       </div>

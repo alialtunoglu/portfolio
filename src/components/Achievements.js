@@ -137,22 +137,22 @@ const Achievements = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-16 grid grid-cols-3 gap-3 md:gap-8"
         >
-          <div className="text-center p-6 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-2xl border border-blue-500/20">
-            <FaAward className="text-4xl text-blue-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">15+</h3>
-            <p className="text-gray-300">{t('achievements.stats.certificates')}</p>
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-xl md:rounded-2xl border border-blue-500/20">
+            <FaAward className="text-2xl md:text-4xl text-blue-400 mx-auto mb-2 md:mb-4" />
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">15+</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('achievements.stats.certificates')}</p>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl border border-purple-500/20">
-            <FaGraduationCap className="text-4xl text-purple-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">500+</h3>
-            <p className="text-gray-300">{t('achievements.stats.hours')}</p>
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-xl md:rounded-2xl border border-purple-500/20">
+            <FaGraduationCap className="text-2xl md:text-4xl text-purple-400 mx-auto mb-2 md:mb-4" />
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">500+</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('achievements.stats.hours')}</p>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-2xl border border-green-500/20">
-            <FaCertificate className="text-4xl text-green-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">10+</h3>
-            <p className="text-gray-300">{t('achievements.stats.bootcamps')}</p>
+          <div className="text-center p-3 md:p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-xl md:rounded-2xl border border-green-500/20">
+            <FaCertificate className="text-2xl md:text-4xl text-green-400 mx-auto mb-2 md:mb-4" />
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">10+</h3>
+            <p className="text-gray-300 text-xs md:text-base">{t('achievements.stats.bootcamps')}</p>
           </div>
         </motion.div>
       </div>

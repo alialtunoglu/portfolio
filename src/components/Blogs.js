@@ -251,23 +251,23 @@ const Blogs = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
-          <div className="text-center p-4 bg-gray-800/30 rounded-xl">
-            <h3 className="text-2xl font-bold text-blue-400 mb-1">{totalBlogs || 25}+</h3>
-            <p className="text-gray-400 text-sm">{t('blogs.stats.posts')}</p>
+          <div className="text-center p-3 md:p-4 bg-gray-800/30 rounded-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-blue-400 mb-1">{totalBlogs || 25}+</h3>
+            <p className="text-gray-400 text-xs md:text-sm">{t('blogs.stats.posts')}</p>
           </div>
-          <div className="text-center p-4 bg-gray-800/30 rounded-xl">
-            <h3 className="text-2xl font-bold text-purple-400 mb-1">15K+</h3>
-            <p className="text-gray-400 text-sm">{t('blogs.stats.reads')}</p>
+          <div className="text-center p-3 md:p-4 bg-gray-800/30 rounded-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-purple-400 mb-1">15K+</h3>
+            <p className="text-gray-400 text-xs md:text-sm">{t('blogs.stats.reads')}</p>
           </div>
-          <div className="text-center p-4 bg-gray-800/30 rounded-xl">
-            <h3 className="text-2xl font-bold text-green-400 mb-1">500+</h3>
-            <p className="text-gray-400 text-sm">{t('blogs.stats.followers')}</p>
+          <div className="text-center p-3 md:p-4 bg-gray-800/30 rounded-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-1">500+</h3>
+            <p className="text-gray-400 text-xs md:text-sm">{t('blogs.stats.followers')}</p>
           </div>
-          <div className="text-center p-4 bg-gray-800/30 rounded-xl">
-            <h3 className="text-2xl font-bold text-orange-400 mb-1">1.2K</h3>
-            <p className="text-gray-400 text-sm">{t('blogs.stats.likes')}</p>
+          <div className="text-center p-3 md:p-4 bg-gray-800/30 rounded-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-orange-400 mb-1">1.2K</h3>
+            <p className="text-gray-400 text-xs md:text-sm">{t('blogs.stats.likes')}</p>
           </div>
         </motion.div>
       </div>

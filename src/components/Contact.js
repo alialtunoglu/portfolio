@@ -74,18 +74,18 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 lg:space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">{t('contact.info')}</h3>
-              <div className="space-y-4">
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6">{t('contact.info')}</h3>
+              <div className="space-y-3 lg:space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.title}
@@ -93,22 +93,22 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
+                    className="flex items-center gap-3 lg:gap-4 p-3 lg:p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
-                      <info.icon className="text-xl text-blue-400" />
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
+                      <info.icon className="text-lg lg:text-xl text-blue-400" />
                     </div>
                     <div>
-                      <h4 className="text-white font-medium">{info.title}</h4>
+                      <h4 className="text-white font-medium text-sm lg:text-base">{info.title}</h4>
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                          className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm lg:text-base"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-300">{info.value}</p>
+                        <p className="text-gray-300 text-sm lg:text-base">{info.value}</p>
                       )}
                     </div>
                   </motion.div>

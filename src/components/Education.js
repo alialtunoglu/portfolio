@@ -117,23 +117,23 @@ const Education = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
-          <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
-            <div className="text-gray-400 text-sm">{t('education.stats.education')}</div>
+          <div className="text-center p-3 md:p-6 bg-gray-800/30 rounded-xl">
+            <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">4+</div>
+            <div className="text-gray-400 text-xs md:text-sm">{t('education.stats.education')}</div>
           </div>
-          <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-purple-400 mb-2">3.52</div>
-            <div className="text-gray-400 text-sm">{t('education.stats.gpa')}</div>
+          <div className="text-center p-3 md:p-6 bg-gray-800/30 rounded-xl">
+            <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-1 md:mb-2">3.52</div>
+            <div className="text-gray-400 text-xs md:text-sm">{t('education.stats.gpa')}</div>
           </div>
-          <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
-            <div className="text-gray-400 text-sm">{t('education.stats.projects')}</div>
+          <div className="text-center p-3 md:p-6 bg-gray-800/30 rounded-xl">
+            <div className="text-2xl md:text-3xl font-bold text-green-400 mb-1 md:mb-2">15+</div>
+            <div className="text-gray-400 text-xs md:text-sm">{t('education.stats.projects')}</div>
           </div>
-          <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
-            <div className="text-gray-400 text-sm">{t('education.stats.certificates')}</div>
+          <div className="text-center p-3 md:p-6 bg-gray-800/30 rounded-xl">
+            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-1 md:mb-2">8+</div>
+            <div className="text-gray-400 text-xs md:text-sm">{t('education.stats.certificates')}</div>
           </div>
         </motion.div>
       </div>
