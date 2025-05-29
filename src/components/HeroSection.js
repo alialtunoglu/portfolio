@@ -59,10 +59,13 @@ const HeroSection = () => {
             transition={{ delay: 0.9 }}
             className="flex flex-wrap gap-4"
           >
-            <button className="group flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <a 
+              href="mailto:alialtunoglu02@gmail.com"
+              className="group flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
               <FaEnvelope className="text-sm group-hover:animate-bounce" />
               {t('hero.contactBtn')}
-            </button>
+            </a>
             <a 
               href="/Ali AltunoğluResume.pdf" 
               download="Ali_Altunoglu_CV.pdf"

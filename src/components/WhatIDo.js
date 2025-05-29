@@ -279,8 +279,11 @@ const WhatIDo = () => {
                       onMouseLeave={() => setHoveredTech(null)}
                       className="relative group cursor-pointer"
                     >
-                      <div className={`w-16 h-16 bg-gray-800/50 hover:bg-gradient-to-r hover:${categoryColors[category]} hover:bg-opacity-20 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600 flex items-center justify-center`}>
-                        <tech.icon className="text-2xl text-gray-300 group-hover:text-white transition-colors duration-300" />
+                      <div className={`w-16 h-16 bg-gray-800/50 hover:bg-gradient-to-r hover:${categoryColors[category]} hover:bg-opacity-20 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600 flex flex-col items-center justify-center p-2`}>
+                        <tech.icon className="text-xl text-gray-300 group-hover:text-white transition-colors duration-300" />
+                        <p className="text-xs text-gray-400 group-hover:text-gray-200 mt-1 transition-colors duration-300 text-center line-clamp-1 truncate w-full">
+                          {tech.name}
+                        </p>
                       </div>
                       
                       {/* Tooltip */}
@@ -298,16 +301,6 @@ const WhatIDo = () => {
                       )}
                     </motion.a>
                   ))}
-                </div>
-
-                {/* Category Stats */}
-                <div className="mt-6 text-center">
-                  <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${categoryColors[category]} bg-opacity-20 rounded-full border border-gray-600/30`}>
-                    <div className={`text-xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent`}>
-                      {techs.length}
-                    </div>
-                    <div className="text-gray-400 text-sm">teknoloji</div>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -345,24 +338,6 @@ const WhatIDo = () => {
                 </p>
               </div>
             </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Summary Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4"
-        >
-          {Object.entries(groupedTechnologies).map(([category, techs]) => (
-            <div key={category} className="text-center p-4 bg-gray-800/30 rounded-xl">
-              <div className={`text-2xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent mb-1`}>
-                {techs.length}+
-              </div>
-              <div className="text-gray-400 text-xs">{category}</div>
-            </div>
           ))}
         </motion.div>
       </div>

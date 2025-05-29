@@ -11,7 +11,7 @@ const FloatingContactButton = () => {
     {
       icon: FaEnvelope,
       label: t('contact.email'),
-      action: () => window.open('mailto:ali.altunoglu@example.com'),
+      action: () => window.open('mailto:alialtunoglu02@gmail.com'),
       color: "from-blue-500 to-blue-600"
     },
     {

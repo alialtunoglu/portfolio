@@ -5,10 +5,6 @@ import {
   FaEnvelope, 
   FaPhone, 
   FaMapMarkerAlt, 
-  FaLinkedin, 
-  FaGithub, 
-  FaMedium,
-  FaStackOverflow,
   FaPaperPlane,
   FaUser,
   FaComment
@@ -129,33 +125,6 @@ const Contact = () => {
               <p className="text-gray-300 text-sm">
                 {t('contact.quickResponseText')}
               </p>
-            </motion.div>
-
-            {/* Additional Contact Info */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
-              className="p-6 bg-gray-800/30 rounded-2xl"
-            >
-              <h4 className="text-lg font-semibold text-white mb-4">
-                {t('contact.workingHours')}
-              </h4>
-              <div className="space-y-2 text-sm text-gray-300">
-                <div className="flex justify-between">
-                  <span>Pazartesi - Cuma</span>
-                  <span>09:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Cumartesi</span>
-                  <span>10:00 - 16:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Pazar</span>
-                  <span>Kapalı</span>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
 
