@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi all, I'm Ali Altunoğlu",
+    "description": "I'm an <span class='text-blue-400 font-semibold'>ML/AI Engineer</span> & <span class='text-purple-400 font-semibold'>Backend Developer</span> from Turkey. I create intelligent systems and robust backend solutions that make a difference.",
+    "contactBtn": "Contact Me",
+    "downloadCV": "Download CV"
+  },
+  "whatido": {
+    "title": "What I Do",
+    "subtitle": "I develop intelligent systems and robust backend solutions using modern technologies",
+    "technologies": "Technologies I Use",
+    "service1": {
+      "title": "Web Interface Development",
+      "description": "I develop responsive web applications using modern React, Vue.js and vanilla JavaScript."
+    },
+    "service2": {
+      "title": "PWA Application Development",
+      "description": "I deliver mobile experience on the web with Progressive Web Apps."
+    },
+    "service3": {
+      "title": "AWS / Firebase Integrations",
+      "description": "I develop secure, scalable and fast solutions with cloud services."
+    }
+  },
+  "openSourceProjects": {
+    "title": "Open Source Projects",
+    "description": "My open source projects and contributions shared with the community",
+    "viewAllProjects": "View All Projects",
+    "updated": "Updated"
+  },
+  "projects": {
+    "title": "Open Source Projects",
+    "subtitle": "My open source projects and contributions shared with the community",
+    "viewAll": "View All Projects",
+    "updated": "Updated"
+  },
+  "achievements": {
+    "title": "Achievements & Certifications",
+    "subtitle": "Certificates and achievements I have obtained in my professional development journey",
+    "viewCertificate": "View Certificate",
+    "stats": {
+      "certificates": "Certificates",
+      "hours": "Training Hours",
+      "bootcamps": "Bootcamps"
+    }
+  },
+  "blogs": {
+    "title": "Latest Blogs",
+    "subtitle": "My technical articles and blog posts where I share my experiences",
+    "readTime": "min read",
+    "moreContent": "More Content",
+    "followMedium": "Follow on Medium",
+    "viewAll": "View All Posts",
+    "stats": {
+      "posts": "Blog Posts",
+      "reads": "Total Reads",
+      "followers": "Followers",
+      "likes": "Likes"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "Projects and experiences I have been involved in my professional career",
+    "technologies": "Technologies Used:",
+    "present": "Present",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects Completed",
+      "companies": "Companies"
+    }
+  },
+  "skills": {
+    "title": "Skills & Proficiency",
+    "subtitle": "My technical competencies and areas of expertise",
+    "proficiency": "Proficiency",
+    "technicalSkills": "Technical Skills"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic background and educational life",
+    "courses": "Core Courses",
+    "projects": "Academic Projects",
+    "activities": "Club Activities",
+    "stats": {
+      "education": "Years Education",
+      "gpa": "GPA",
+      "projects": "Projects",
+      "certificates": "Certificates"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+} 

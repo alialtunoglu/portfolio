@@ -1,32 +1,34 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTimes, FaComment } from 'react-icons/fa';
 
 const FloatingContactButton = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const contactOptions = [
     {
       icon: FaEnvelope,
-      label: "Email",
+      label: t('contact.email'),
       action: () => window.open('mailto:ali.altunoglu@example.com'),
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: FaPhone,
-      label: "Telefon",
+      label: t('contact.phone'),
       action: () => window.open('tel:+905551234567'),
       color: "from-green-500 to-green-600"
     },
     {
       icon: FaLinkedin,
-      label: "LinkedIn",
+      label: t('contact.linkedin'),
       action: () => window.open('https://linkedin.com/in/alialtunoglu', '_blank'),
       color: "from-blue-600 to-blue-700"
     },
     {
       icon: FaGithub,
-      label: "GitHub",
+      label: t('contact.github'),
       action: () => window.open('https://github.com/alialtunoglu', '_blank'),
       color: "from-gray-700 to-gray-800"
     }

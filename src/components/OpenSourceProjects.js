@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaGithub, FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 
 const OpenSourceProjects = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
       name: "AI Chat Assistant",
@@ -83,10 +86,10 @@ const OpenSourceProjects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Open Source Projects
+            {t('openSourceProjects.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Toplulukla paylaştığım açık kaynak projelerim ve katkılarım
+            {t('openSourceProjects.description')}
           </p>
         </motion.div>
 
@@ -181,7 +184,7 @@ const OpenSourceProjects = () => {
         >
           <button className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             <FaGithub className="text-lg" />
-            Tüm Projelerimi Gör
+            {t('openSourceProjects.viewAllProjects')}
           </button>
         </motion.div>
       </div>

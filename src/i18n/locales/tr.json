@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "skills": "Yetenekler",
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "blog": "Blog",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Merhaba, Ben Ali Altunoğlu",
+    "description": "Türkiye'den bir <span class='text-blue-400 font-semibold'>ML/AI Mühendisi</span> ve <span class='text-purple-400 font-semibold'>Backend Geliştiricisi</span>yim. Fark yaratan akıllı sistemler ve güçlü backend çözümleri oluşturuyorum.",
+    "contactBtn": "Bana Ulaş",
+    "downloadCV": "CV'yi İndir"
+  },
+  "whatido": {
+    "title": "Ne Yapıyorum",
+    "subtitle": "Modern teknolojiler kullanarak akıllı sistemler ve güçlü backend çözümleri geliştiriyorum",
+    "technologies": "Kullandığım Teknolojiler",
+    "service1": {
+      "title": "Web Arayüzleri Geliştiriyorum",
+      "description": "Modern React, Vue.js ve vanilla JavaScript kullanarak responsive web uygulamaları geliştiriyorum."
+    },
+    "service2": {
+      "title": "PWA Uygulamaları Geliştiriyorum",
+      "description": "Progressive Web Apps ile mobil deneyimi web üzerinde sunuyorum."
+    },
+    "service3": {
+      "title": "AWS / Firebase Entegrasyonları",
+      "description": "Bulut servisleri ile güvenli, ölçeklenebilir ve hızlı çözümler geliştiriyorum."
+    }
+  },
+  "openSourceProjects": {
+    "title": "Açık Kaynak Projeler",
+    "description": "Toplulukla paylaştığım açık kaynak projelerim ve katkılarım",
+    "viewAllProjects": "Tüm Projelerimi Gör",
+    "updated": "Güncellendi"
+  },
+  "projects": {
+    "title": "Açık Kaynak Projeler",
+    "subtitle": "Toplulukla paylaştığım açık kaynak projelerim ve katkılarım",
+    "viewAll": "Tüm Projelerimi Gör",
+    "updated": "Güncellendi"
+  },
+  "achievements": {
+    "title": "Başarılar ve Sertifikalar",
+    "subtitle": "Profesyonel gelişim yolculuğumda elde ettiğim sertifikalar ve başarılar",
+    "viewCertificate": "Sertifikayı Görüntüle",
+    "stats": {
+      "certificates": "Sertifika",
+      "hours": "Eğitim Saati",
+      "bootcamps": "Bootcamp"
+    }
+  },
+  "blogs": {
+    "title": "Son Yazılar",
+    "subtitle": "Teknik yazılarım ve deneyimlerimi paylaştığım blog yazıları",
+    "readTime": "dk okuma",
+    "moreContent": "Daha Fazla İçerik",
+    "followMedium": "Medium'da Takip Et",
+    "viewAll": "Tüm Yazıları Gör",
+    "stats": {
+      "posts": "Blog Yazısı",
+      "reads": "Toplam Okuma",
+      "followers": "Takipçi",
+      "likes": "Beğeni"
+    }
+  },
+  "experience": {
+    "title": "Profesyonel Deneyim",
+    "subtitle": "Profesyonel kariyerimde yer aldığım projeler ve deneyimlerim",
+    "technologies": "Kullanılan Teknolojiler:",
+    "present": "Günümüz",
+    "stats": {
+      "experience": "Yıl Deneyim",
+      "projects": "Proje Tamamlandı",
+      "companies": "Şirket"
+    }
+  },
+  "skills": {
+    "title": "Yetenekler ve Yetkinlik",
+    "subtitle": "Teknik yetkinliklerim ve uzmanlık alanlarım",
+    "proficiency": "Yetkinlik",
+    "technicalSkills": "Teknik Yetkinlikler"
+  },
+  "education": {
+    "title": "Eğitim",
+    "subtitle": "Akademik geçmişim ve eğitim hayatım",
+    "courses": "Ana Dersler",
+    "projects": "Akademik Projeler",
+    "activities": "Kulüp Aktiviteleri",
+    "stats": {
+      "education": "Yıl Eğitim",
+      "gpa": "GPA",
+      "projects": "Proje",
+      "certificates": "Sertifika"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Telefon",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+} 

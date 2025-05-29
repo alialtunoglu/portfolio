@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin, FaMedium, FaStackOverflow, FaDownload, FaEnvelope } from 'react-icons/fa';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+  
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/alialtunoglu", label: "GitHub" },
     { icon: FaLinkedin, href: "https://linkedin.com/in/alialtunoglu", label: "LinkedIn" },
@@ -11,7 +14,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 pt-24">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
@@ -29,7 +32,7 @@ const HeroSection = () => {
               className="flex items-center gap-3"
             >
               <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Hi all, I'm Ali Altunoğlu
+                {t('hero.greeting')}
               </h1>
               <motion.span
                 animate={{ rotate: [0, 20, 0] }}
@@ -40,16 +43,13 @@ const HeroSection = () => {
               </motion.span>
             </motion.div>
             
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
               className="text-xl text-gray-300 leading-relaxed"
-            >
-              I'm an <span className="text-blue-400 font-semibold">ML/AI Engineer</span> & 
-              <span className="text-purple-400 font-semibold"> Backend Developer</span> from Turkey. 
-              I create intelligent systems and robust backend solutions that make a difference.
-            </motion.p>
+              dangerouslySetInnerHTML={{ __html: t('hero.description') }}
+            />
           </div>
 
           {/* Action Buttons */}
@@ -61,11 +61,11 @@ const HeroSection = () => {
           >
             <button className="group flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               <FaEnvelope className="text-sm group-hover:animate-bounce" />
-              Bana Ulaş
+              {t('hero.contactBtn')}
             </button>
             <button className="flex items-center gap-2 border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:bg-gray-800">
               <FaDownload className="text-sm" />
-              CV'yi İndir
+              {t('hero.downloadCV')}
             </button>
           </motion.div>
 

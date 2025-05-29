@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   FaPython, 
   FaJs, 
@@ -21,6 +22,7 @@ import {
 } from 'react-icons/si';
 
 const WhatIDo = () => {
+  const { t } = useTranslation();
   const [hoveredTech, setHoveredTech] = useState(null);
 
   const technologies = [
@@ -41,18 +43,18 @@ const WhatIDo = () => {
   const services = [
     {
       icon: FaCode,
-      title: "Web Arayüzleri Geliştiriyorum",
-      description: "Modern React, Vue.js ve vanilla JavaScript kullanarak responsive web uygulamaları geliştiriyorum."
+      title: t('whatido.service1.title'),
+      description: t('whatido.service1.description')
     },
     {
       icon: FaMobile,
-      title: "PWA Uygulamaları Geliştiriyorum", 
-      description: "Progressive Web Apps ile mobil deneyimi web üzerinde sunuyorum."
+      title: t('whatido.service2.title'), 
+      description: t('whatido.service2.description')
     },
     {
       icon: FaCloud,
-      title: "AWS / Firebase Entegrasyonları",
-      description: "Bulut servisleri ile güvenli, ölçeklenebilir ve hızlı çözümler geliştiriyorum."
+      title: t('whatido.service3.title'),
+      description: t('whatido.service3.description')
     }
   ];
 
@@ -67,10 +69,10 @@ const WhatIDo = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            What I Do
+            {t('whatido.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Modern teknolojiler kullanarak akıllı sistemler ve güçlü backend çözümleri geliştiriyorum
+            {t('whatido.subtitle')}
           </p>
         </motion.div>
 
@@ -83,7 +85,7 @@ const WhatIDo = () => {
           className="mb-20"
         >
           <h3 className="text-2xl font-semibold mb-8 text-center text-gray-200">
-            Kullandığım Teknolojiler
+            {t('whatido.technologies')}
           </h3>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (

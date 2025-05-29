@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './i18n/i18n'; // Initialize i18n
+
+import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import WhatIDo from './components/WhatIDo';
 import OpenSourceProjects from './components/OpenSourceProjects';
@@ -17,6 +20,9 @@ function App() {
         {/* Background gradient */}
         <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 -z-10"></div>
         
+        {/* Navbar */}
+        <Navbar />
+        
         {/* Main content */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -24,14 +30,34 @@ function App() {
           transition={{ duration: 0.8 }}
           className="relative z-10"
         >
-          <HeroSection />
-          <WhatIDo />
-          <OpenSourceProjects />
-          <Achievements />
-          <Blogs />
-          <Experience />
-          <Skills />
-          <Education />
+          <div id="hero">
+            <HeroSection />
+          </div>
+          <div id="whatido">
+            <WhatIDo />
+          </div>
+          <div id="projects">
+            <OpenSourceProjects />
+          </div>
+          <div id="achievements">
+            <Achievements />
+          </div>
+          <div id="blogs">
+            <Blogs />
+          </div>
+          <div id="experience">
+            <Experience />
+          </div>
+          <div id="skills">
+            <Skills />
+          </div>
+          <div id="education">
+            <Education />
+          </div>
+          <div id="contact">
+            {/* Contact section placeholder */}
+            <div className="py-20"></div>
+          </div>
         </motion.div>
         
         <FloatingContactButton />
