@@ -8,70 +8,100 @@ const OpenSourceProjects = () => {
 
   const projects = [
     {
-      name: "AI Chat Assistant",
-      description: "OpenAI GPT entegrasyonlu modern chat uygulaması. React ve Node.js ile geliştirilmiş, gerçek zamanlı mesajlaşma desteği.",
-      language: "JavaScript",
-      languageColor: "#f1e05a",
-      stars: 124,
-      forks: 23,
-      size: "2.4 MB",
-      topics: ["react", "nodejs", "openai", "chat", "websocket"],
-      lastUpdated: "2 days ago"
-    },
-    {
-      name: "ML Model Pipeline",
-      description: "Makine öğrenmesi modelleri için otomatik deployment pipeline. Docker ve Kubernetes ile konteyner destekli.",
-      language: "Python",
-      languageColor: "#3572A5",
-      stars: 89,
-      forks: 15,
-      size: "5.1 MB",
-      topics: ["python", "machine-learning", "docker", "kubernetes", "mlops"],
-      lastUpdated: "5 days ago"
-    },
-    {
-      name: "E-Commerce API",
-      description: "Django REST Framework ile geliştirilmiş mikroservis mimarili e-ticaret backend API. PostgreSQL ve Redis destekli.",
-      language: "Python",
-      languageColor: "#3572A5",
-      stars: 156,
-      forks: 32,
-      size: "3.8 MB",
-      topics: ["django", "rest-api", "postgresql", "redis", "microservices"],
-      lastUpdated: "1 week ago"
-    },
-    {
-      name: "React Native Finance App",
-      description: "Kişisel finans yönetimi için React Native mobil uygulaması. Firebase backend ve real-time sync özellikli.",
+      name: "BrainPath Alzheimer Detection",
+      description: "Teknofest yarışması için geliştirilmiş yapay zeka destekli Alzheimer hastalığı erken tanı sistemi. TypeScript ve modern web teknolojileri kullanılarak geliştirilmiştir.",
       language: "TypeScript",
       languageColor: "#2b7489",
-      stars: 67,
-      forks: 12,
-      size: "4.2 MB",
-      topics: ["react-native", "typescript", "firebase", "finance", "mobile"],
-      lastUpdated: "3 days ago"
+      stars: 0,
+      forks: 0,
+      size: "26.3 MB",
+      topics: ["alzheimer", "ai", "healthcare", "typescript", "teknofest"],
+      lastUpdated: "30 Mar 2025",
+      html_url: "https://github.com/alialtunoglu/BrainPathTeknofest_AlzheimerDetection"
     },
     {
-      name: "Data Visualization Dashboard",
-      description: "D3.js ve React ile geliştirilmiş interaktif veri görselleştirme dashboard'u. Real-time data processing.",
-      language: "JavaScript",
-      languageColor: "#f1e05a",
-      stars: 78,
-      forks: 18,
-      size: "6.7 MB",
-      topics: ["d3js", "react", "dashboard", "visualization", "analytics"],
-      lastUpdated: "4 days ago"
+      name: "MultiShop Mikroservice Project",
+      description: "Mikroservis mimarisi kullanılarak geliştirilmiş modern e-ticaret platformu. C# .NET Core ile backend servisleri ve modern UI tasarımı.",
+      language: "C#",
+      languageColor: "#239120",
+      stars: 0,
+      forks: 0,
+      size: "19.9 MB",
+      topics: ["microservices", "ecommerce", "dotnet", "csharp", "api"],
+      lastUpdated: "14 Mar 2025",
+      html_url: "https://github.com/alialtunoglu/MultiShopMikroServiceProject"
     },
     {
-      name: "Cloud Infrastructure Tools",
-      description: "AWS ve Terraform ile infrastructure as code araçları. Otomatik deployment ve monitoring çözümleri.",
-      language: "Go",
-      languageColor: "#00ADD8",
-      stars: 45,
-      forks: 8,
-      size: "1.9 MB",
-      topics: ["golang", "aws", "terraform", "infrastructure", "devops"],
-      lastUpdated: "1 week ago"
+      name: "Movie API",
+      description: "Onion Architecture, CQRS ve Mediator pattern kullanılarak geliştirilmiş film değerlendirme sistemi. MongoDB veritabanı ile NoSQL deneyimi.",
+      language: "C#",
+      languageColor: "#239120",
+      stars: 0,
+      forks: 0,
+      size: "16.2 MB",
+      topics: ["onion-architecture", "cqrs", "mediator", "mongodb", "api"],
+      lastUpdated: "14 Mar 2025",
+      html_url: "https://github.com/alialtunoglu/MovieApi"
+    },
+    {
+      name: "Course App",
+      description: "Django ile geliştirilmiş online kurs platformu. Kullanıcı kimlik doğrulama, kurs yönetimi ve içerik paylaşımı özellikleri içerir.",
+      language: "Python",
+      languageColor: "#3572A5",
+      stars: 1,
+      forks: 0,
+      size: "24.9 MB",
+      topics: ["django", "python", "course", "education", "web-app"],
+      lastUpdated: "22 Feb 2025",
+      html_url: "https://github.com/alialtunoglu/courseapp"
+    },
+    {
+      name: "Fruit & Vegetable Classification",
+      description: "Makine öğrenmesi ve derin öğrenme modellerinin meyve-sebze sınıflandırmasındaki performans karşılaştırması. Jupyter Notebook ile detaylı analiz.",
+      language: "Jupyter Notebook",
+      languageColor: "#DA5B0B",
+      stars: 4,
+      forks: 0,
+      size: "11.4 MB",
+      topics: ["machine-learning", "deep-learning", "classification", "jupyter", "ai"],
+      lastUpdated: "22 Feb 2025",
+      html_url: "https://github.com/alialtunoglu/Comparison-of-Machine-Learning-and-Deep-Learning-Models-for-Fruit-and-Vegetable-Classification"
+    },
+    {
+      name: "DealChat Social Media",
+      description: "Java Spring Boot ile geliştirilmiş sosyal medya uygulaması. Modern backend mimarisi ve RESTful API tasarımı.",
+      language: "Java",
+      languageColor: "#b07219",
+      stars: 2,
+      forks: 0,
+      size: "987 KB",
+      topics: ["java", "spring-boot", "social-media", "rest-api", "backend"],
+      lastUpdated: "22 Feb 2025",
+      html_url: "https://github.com/alialtunoglu/DealChat"
+    },
+    {
+      name: "PDF Converter",
+      description: "PDF dosyalarını başka dosya formatlarına dönüştüren araç seti. Jupyter Notebook ile geliştirilmiş, dosya dönüştürme işlemlerini otomatikleştiren pratik çözüm.",
+      language: "Jupyter Notebook",
+      languageColor: "#DA5B0B",
+      stars: 1,
+      forks: 3,
+      size: "38 KB",
+      topics: ["pdf", "converter", "jupyter", "automation", "file-processing"],
+      lastUpdated: "4 Apr 2025",
+      html_url: "https://github.com/alialtunoglu/PDF_Converter"
+    },
+    {
+      name: "Bean Leaf Disease Classification",
+      description: "TensorFlow ve OpenCV kullanılarak bitki yapraklarının gerçek zamanlı tespiti ve sınıflandırması. Tarım teknolojisinde yapay zeka uygulaması.",
+      language: "Jupyter Notebook", 
+      languageColor: "#DA5B0B",
+      stars: 1,
+      forks: 0,
+      size: "3.2 MB",
+      topics: ["tensorflow", "opencv", "agriculture", "disease-detection", "computer-vision"],
+      lastUpdated: "22 Feb 2025",
+      html_url: "https://github.com/alialtunoglu/Bean-Leaf-Disease-Classification"
     }
   ];
 
@@ -112,9 +142,14 @@ const OpenSourceProjects = () => {
                       {project.name}
                     </h3>
                   </div>
-                  <button className="p-2 rounded-lg bg-gray-700/50 hover:bg-gray-600/50 transition-colors duration-300">
+                  <a
+                    href={project.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-700/50 hover:bg-gray-600/50 transition-colors duration-300"
+                  >
                     <FaEye className="text-sm text-gray-400 hover:text-white" />
-                  </button>
+                  </a>
                 </div>
 
                 {/* Description */}
@@ -162,12 +197,17 @@ const OpenSourceProjects = () => {
                 {/* Footer */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
                   <span className="text-xs text-gray-500">
-                    Updated {project.lastUpdated}
+                    {t('openSourceProjects.updated')} {project.lastUpdated}
                   </span>
-                  <button className="flex items-center gap-2 px-3 py-1 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-300">
+                  <a
+                    href={project.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-1 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-300"
+                  >
                     <FaGithub className="text-xs" />
                     View
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -182,10 +222,15 @@ const OpenSourceProjects = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <a
+            href="https://github.com/alialtunoglu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
             <FaGithub className="text-lg" />
             {t('openSourceProjects.viewAllProjects')}
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
@@ -9,16 +9,17 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { key: 'home', href: '#hero' },
     { key: 'about', href: '#whatido' },
     { key: 'projects', href: '#projects' },
-    { key: 'skills', href: '#skills' },
-    { key: 'experience', href: '#experience' },
-    { key: 'education', href: '#education' },
+    { key: 'achievements', href: '#achievements' },
     { key: 'blog', href: '#blogs' },
+    { key: 'experience', href: '#experience' },
+    { key: 'skills', href: '#skills' },
+    { key: 'education', href: '#education' },
     { key: 'contact', href: '#contact' }
-  ];
+  ], []);
 
   const languages = [
     { code: 'tr', name: 'TR', flag: '🇹🇷' },

@@ -3,6 +3,7 @@
     "home": "Ana Sayfa",
     "about": "Hakkımda",
     "projects": "Projeler",
+    "achievements": "Sertifikalar",
     "skills": "Yetenekler",
     "experience": "Deneyim",
     "education": "Eğitim",
@@ -102,7 +103,23 @@
     "email": "Email",
     "phone": "Telefon",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "title": "İletişim",
+    "subtitle": "Benimle iletişime geçmek için aşağıdaki bilgileri kullanabilir veya formu doldurabilirsiniz",
+    "info": "İletişim Bilgileri",
+    "location": "Konum",
+    "socialMedia": "Sosyal Medya",
+    "quickResponse": "Hızlı Yanıt",
+    "quickResponseText": "Genellikle 24 saat içinde geri dönüş yapıyorum. Acil durumlar için LinkedIn üzerinden ulaşabilirsiniz.",
+    "sendMessage": "Mesaj Gönder",
+    "name": "Ad Soyad",
+    "namePlaceholder": "Adınızı girin",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "subject": "Konu",
+    "subjectPlaceholder": "Mesaj konusunu girin",
+    "message": "Mesaj",
+    "messagePlaceholder": "Mesajınızı buraya yazın...",
+    "sendBtn": "Mesajı Gönder"
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."

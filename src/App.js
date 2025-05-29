@@ -11,6 +11,7 @@ import Blogs from './components/Blogs';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
+import Contact from './components/Contact';
 import FloatingContactButton from './components/FloatingContactButton';
 
 function App() {
@@ -55,8 +56,7 @@ function App() {
             <Education />
           </div>
           <div id="contact">
-            {/* Contact section placeholder */}
-            <div className="py-20"></div>
+            <Contact />
           </div>
         </motion.div>
         
