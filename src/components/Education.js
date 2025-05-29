@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaUniversity, FaCalendar, FaMapMarker, FaGraduationCap } from 'react-icons/fa';
 
+// Import university logo
+import ktuLogo from '../assets/karadeniz.png';
+
 const Education = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -14,10 +20,10 @@ const Education = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Education
+            {t('education.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Akademik geçmişim ve eğitim hayatım
+            {t('education.subtitle')}
           </p>
         </motion.div>
 
@@ -33,8 +39,12 @@ const Education = () => {
               {/* University Header */}
               <div className="flex flex-col lg:flex-row items-center gap-8 mb-8">
                 {/* University Logo */}
-                <div className="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FaUniversity className="text-4xl lg:text-5xl text-blue-400" />
+                <div className="w-24 h-24 lg:w-32 lg:h-32 bg-white rounded-2xl flex items-center justify-center p-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <img 
+                    src={ktuLogo} 
+                    alt="Karadeniz Teknik Üniversitesi logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 
                 {/* University Info */}
@@ -81,7 +91,7 @@ const Education = () => {
               {/* Key Courses */}
               <div className="mb-8">
                 <h4 className="text-lg font-semibold text-white mb-4 text-center lg:text-left">
-                  Ana Dersler
+                  {t('education.courses')}
                 </h4>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {[
@@ -107,7 +117,7 @@ const Education = () => {
               {/* Activities */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-xl border border-purple-500/20">
-                  <h4 className="text-lg font-semibold text-white mb-3">Akademik Projeler</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.projects')}</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• Makine Öğrenmesi ile Görüntü Sınıflandırma</li>
                     <li>• Web Tabanlı Öğrenci Bilgi Sistemi</li>
@@ -115,7 +125,7 @@ const Education = () => {
                   </ul>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-blue-500/10 to-cyan-600/10 rounded-xl border border-blue-500/20">
-                  <h4 className="text-lg font-semibold text-white mb-3">Kulüp Aktiviteleri</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.activities')}</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• Bilgisayar Mühendisliği Kulübü Üyesi</li>
                     <li>• Hackathon Organizasyonu</li>
@@ -137,19 +147,19 @@ const Education = () => {
         >
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
             <div className="text-3xl font-bold text-blue-400 mb-2">4+</div>
-            <div className="text-gray-400 text-sm">Yıl Eğitim</div>
+            <div className="text-gray-400 text-sm">{t('education.stats.education')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
             <div className="text-3xl font-bold text-purple-400 mb-2">3.2</div>
-            <div className="text-gray-400 text-sm">GPA</div>
+            <div className="text-gray-400 text-sm">{t('education.stats.gpa')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
             <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
-            <div className="text-gray-400 text-sm">Proje</div>
+            <div className="text-gray-400 text-sm">{t('education.stats.projects')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
             <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
-            <div className="text-gray-400 text-sm">Sertifika</div>
+            <div className="text-gray-400 text-sm">{t('education.stats.certificates')}</div>
           </div>
         </motion.div>
       </div>

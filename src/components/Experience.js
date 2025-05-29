@@ -1,17 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaBuilding, FaCalendar, FaCode } from 'react-icons/fa';
 
+// Import company logos
+import solonportLogo from '../assets/solonport.png';
+import sistekLogo from '../assets/sistek.jpg';
+import darphaneLogo from '../assets/Darphane_logo.png';
+
 const Experience = () => {
+  const { t } = useTranslation();
+
   const experiences = [
     {
       company: "SolonPort",
       position: "Senior ML/AI Engineer",
-      period: "2023 - Günümüz",
+      period: "2023 - " + t('experience.present'),
       location: "İstanbul, Türkiye",
       description: "Makine öğrenmesi modelleri geliştirme ve production'a alma. MLOps süreçlerini iyileştirme ve AI entegrasyonları yapma.",
       technologies: ["Python", "TensorFlow", "Kubernetes", "AWS"],
-      logo: "🚢"
+      logo: solonportLogo
     },
     {
       company: "Sistek",
@@ -20,7 +28,7 @@ const Experience = () => {
       location: "Ankara, Türkiye", 
       description: "Django REST API geliştirme ve mikroservis mimarilerini tasarlama. PostgreSQL veritabanı optimizasyonu ve Docker containerization.",
       technologies: ["Django", "PostgreSQL", "Docker", "Redis"],
-      logo: "💻"
+      logo: sistekLogo
     },
     {
       company: "Darphane",
@@ -29,7 +37,7 @@ const Experience = () => {
       location: "Ankara, Türkiye",
       description: "Web uygulaması geliştirme ve veritabanı tasarımı. Spring Boot ile RESTful servisler geliştirme ve test süreçlerine katkı.",
       technologies: ["Spring Boot", "Java", "MySQL", "React"],
-      logo: "🏛️"
+      logo: darphaneLogo
     }
   ];
 
@@ -44,10 +52,10 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Professional Experience
+            {t('experience.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Profesyonel kariyerimde yer aldığım projeler ve deneyimlerim
+            {t('experience.subtitle')}
           </p>
         </motion.div>
 
@@ -76,8 +84,12 @@ const Experience = () => {
                     <div className="p-8 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
                       {/* Header */}
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                          {exp.logo}
+                        <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <img 
+                            src={exp.logo} 
+                            alt={`${exp.company} logo`}
+                            className="w-full h-full object-contain"
+                          />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-white mb-1">
@@ -106,7 +118,7 @@ const Experience = () => {
                       <div className="space-y-3">
                         <div className="flex items-center gap-2 text-sm text-gray-400">
                           <FaCode className="text-xs" />
-                          <span>Kullanılan Teknolojiler:</span>
+                          <span>{t('experience.technologies')}</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
@@ -143,21 +155,21 @@ const Experience = () => {
               <FaBuilding className="text-2xl text-blue-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">3+</h3>
-            <p className="text-gray-300">Yıl Deneyim</p>
+            <p className="text-gray-300">{t('experience.stats.experience')}</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl border border-purple-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
               <FaCode className="text-2xl text-purple-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">15+</h3>
-            <p className="text-gray-300">Proje Tamamlandı</p>
+            <p className="text-gray-300">{t('experience.stats.projects')}</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-2xl border border-green-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🚀</span>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">3</h3>
-            <p className="text-gray-300">Şirket</p>
+            <p className="text-gray-300">{t('experience.stats.companies')}</p>
           </div>
         </motion.div>
       </div>
