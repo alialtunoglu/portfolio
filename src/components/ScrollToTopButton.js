@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { FaChevronUp, FaRocket } from 'react-icons/fa';
 
 const ScrollToTopButton = () => {
-  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when user scrolls down

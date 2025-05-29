@@ -1,6 +1,6 @@
 [build]
   publish = "build"
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "CI=false npm install --legacy-peer-deps && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -11,10 +11,10 @@
   status = 200
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "CI=false npm install --legacy-peer-deps && npm run build"
 
 [context.branch-deploy]
-  command = "npm run build"
+  command = "CI=false npm install --legacy-peer-deps && npm run build"
 
 [[headers]]
   for = "/static/*"
