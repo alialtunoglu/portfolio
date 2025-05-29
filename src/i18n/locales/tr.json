@@ -132,7 +132,14 @@
     "title": "Yetenekler ve Yetkinlik",
     "subtitle": "Teknik yetkinliklerim ve uzmanlık alanlarım",
     "proficiency": "Yetkinlik",
-    "technicalSkills": "Teknik Yetkinlikler"
+    "technicalSkills": "Teknik Yetkinlikler",
+    "languageSkills": "Dil Becerileri",
+    "languages": {
+      "turkish": "Türkçe",
+      "english": "İngilizce",
+      "native": "Ana Dil",
+      "intermediate": "B1 (Orta Seviye)"
+    }
   },
   "education": {
     "title": "Eğitim",
@@ -168,6 +175,8 @@
     "email": "E-posta",
     "phone": "Telefon",
     "location": "Konum",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
     "socialMedia": "Sosyal Medya",
     "sendMessage": "Mesaj Gönder",
     "name": "Ad Soyad",

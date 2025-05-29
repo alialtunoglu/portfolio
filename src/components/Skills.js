@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaBrain, FaServer, FaCode, FaDatabase, FaCloud } from 'react-icons/fa';
+import { FaBrain, FaServer, FaDatabase, FaCloud } from 'react-icons/fa';
 
 const Skills = () => {
   const { t } = useTranslation();
@@ -12,32 +12,23 @@ const Skills = () => {
       icon: FaBrain,
       percentage: 90,
       color: "from-blue-500 to-cyan-500",
-      description: "Machine Learning, Deep Learning, TensorFlow, PyTorch",
+      description: "Makine öğrenmesi modelleri geliştirme ve yapay zeka sistemleri tasarlama",
       details: ["MLOps","Computer Vision", "NLP","Machine/Deep Learning", "Data Science/Analysis", "Reinforcement Learning"]
-
     },
     {
       category: "Backend Development", 
       icon: FaServer,
       percentage: 85,
       color: "from-purple-500 to-pink-500",
-      description: "Django, Flask, ASP.NET, Spring Boot",
+      description: "Ölçeklenebilir ve güvenli backend sistemleri geliştirme",
       details: ["Django", "Flask", "ASP.NET", "Spring Boot", "RESTful APIs", "Microservices"]
-    },
-    {
-      category: "Programming Languages",
-      icon: FaCode,
-      percentage: 88,
-      color: "from-green-500 to-emerald-500",
-      description: "Python, JavaScript, Java, C#",
-      details: ["Python", "Java", "C#", "JavaScript", "PHP", "C/C++"]
     },
     {
       category: "Database Systems",
       icon: FaDatabase,
       percentage: 82,
       color: "from-orange-500 to-red-500",
-      description: "SQL & NoSQL Database Management",
+      description: "Veritabanı tasarımı ve optimizasyonu",
       details: ["MySQL", "MongoDB", "PostgreSQL", "MsSQL", "Redis", "Database Design"]
     },
     {
@@ -45,9 +36,9 @@ const Skills = () => {
       icon: FaCloud,
       percentage: 78,
       color: "from-indigo-500 to-blue-500",
-      description: "Cloud Services & Container Technologies",
+      description: "Bulut teknolojileri ve sürekli entegrasyon",
       details: ["Azure", "Docker", "Kubernetes", "CI/CD", "Git", "Linux"]
-    },
+    }
   ];
 
   return (
@@ -60,7 +51,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent leading-relaxed py-2">
             {t('skills.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -68,17 +59,18 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-12">
+        {/* Technical Skills - 2x2 Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.category}
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="p-8 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
+              <div className="p-8 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full">
                 {/* Header */}
                 <div className="flex items-center gap-6 mb-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${skill.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -88,7 +80,7 @@ const Skills = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {skill.category}
                     </h3>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 text-sm">
                       {skill.description}
                     </p>
                   </div>
@@ -146,13 +138,13 @@ const Skills = () => {
           className="mt-16"
         >
           <h3 className="text-2xl font-bold text-center text-white mb-8">
-            Language Skills
+            {t('skills.languageSkills')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="p-6 bg-gray-800/40 rounded-xl border border-gray-700/30">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-white font-medium">Turkish</span>
-                <span className="text-gray-400">Native</span>
+                <span className="text-white font-medium">{t('skills.languages.turkish')}</span>
+                <span className="text-gray-400">{t('skills.languages.native')}</span>
               </div>
               <div className="w-full bg-gray-700/50 rounded-full h-2">
                 <div className="w-full h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
@@ -160,8 +152,8 @@ const Skills = () => {
             </div>
             <div className="p-6 bg-gray-800/40 rounded-xl border border-gray-700/30">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-white font-medium">English</span>
-                <span className="text-gray-400">B1 (Intermediate)</span>
+                <span className="text-white font-medium">{t('skills.languages.english')}</span>
+                <span className="text-gray-400">{t('skills.languages.intermediate')}</span>
               </div>
               <div className="w-full bg-gray-700/50 rounded-full h-2">
                 <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>

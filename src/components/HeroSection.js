@@ -31,7 +31,7 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="flex items-center gap-3"
             >
-              <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent leading-relaxed py-2">
                 {t('hero.greeting')}
               </h1>
               <motion.span

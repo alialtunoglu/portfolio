@@ -132,7 +132,14 @@
     "title": "Skills & Proficiency",
     "subtitle": "My technical competencies and areas of expertise",
     "proficiency": "Proficiency",
-    "technicalSkills": "Technical Skills"
+    "technicalSkills": "Technical Skills",
+    "languageSkills": "Language Skills",
+    "languages": {
+      "turkish": "Turkish",
+      "english": "English", 
+      "native": "Native",
+      "intermediate": "B1 (Intermediate)"
+    }
   },
   "education": {
     "title": "Education",
@@ -167,6 +174,8 @@
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
     "socialMedia": "Social Media",
     "sendMessage": "Send Message",
     "name": "Full Name",

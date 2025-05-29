@@ -49,8 +49,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form submission logic here
-    console.log('Form submitted:', formData);
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(`Ad: ${formData.name}\nE-posta: ${formData.email}\n\nMesaj:\n${formData.message}`);
+    const mailtoLink = `mailto:alialtunoglu02@gmail.com?subject=${subject}&body=${body}`;
+    window.open(mailtoLink);
   };
 
   return (
@@ -63,7 +66,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent leading-relaxed py-2">
             {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
