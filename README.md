@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern ve responsive kişisel portfolio websitesi. React, Tailwind CSS ve Framer Motion ile geliştirilmiştir.
 
-## Available Scripts
+## 🚀 Özellikler
 
-In the project directory, you can run:
+- **Dinamik GitHub Entegrasyonu**: GitHub API ile pinlenmiş projelerinizi otomatik olarak çeker
+- **Çok Dilli Destek**: Türkçe ve İngilizce dil seçenekleri
+- **Modern Tasarım**: Dark theme, gradient renkler ve animasyonlar
+- **Responsive**: Tüm cihazlarda mükemmel görünüm
+- **Performant**: Optimized loading ve smooth animations
 
-### `npm start`
+## 📦 Teknolojiler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19
+- Tailwind CSS
+- Framer Motion
+- React i18next
+- GitHub GraphQL API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Kurulum
 
-### `npm test`
+1. Repository'yi klonlayın:
+```bash
+git clone https://github.com/alialtunoglu/portfolio.git
+cd portfolio
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Bağımlılıkları yükleyin:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Environment variables oluşturun:
+```bash
+# .env dosyası oluşturun ve aşağıdaki değerleri ekleyin:
+REACT_APP_GITHUB_TOKEN=your_github_token_here
+REACT_APP_GITHUB_USERNAME=your_github_username
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Uygulamayı başlatın:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 GitHub Token Oluşturma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. GitHub Settings > Developer settings > Personal access tokens > Tokens (classic)
+2. "Generate new token (classic)" tıklayın
+3. Gerekli izinleri verin:
+   - `read:user`
+   - `repo`
+4. Token'ı kopyalayın ve `.env` dosyasına ekleyin
 
-### `npm run eject`
+## 📱 Bölümler
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Hero Section**: Karşılama ve tanıtım
+- **About**: Kullandığım teknolojiler ve hizmetler
+- **Projects**: GitHub'dan dinamik olarak çekilen pinlenmiş projeler
+- **Achievements**: Sertifikalar ve başarılar
+- **Blog**: Medium yazıları
+- **Experience**: Profesyonel deneyim
+- **Skills**: Teknik yetkinlikler
+- **Education**: Eğitim geçmişi
+- **Contact**: İletişim formu ve bilgileri
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌟 Dinamik GitHub Entegrasyonu
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Portfolio, GitHub GraphQL API kullanarak pinlenmiş projelerinizi otomatik olarak çeker. GitHub'da pinlediklerinizi değiştirdiğinizde portfolio otomatik olarak güncellenir.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Avantajlar:
+- ✅ Manuel güncelleme gerektirmez
+- ✅ Gerçek zamanlı proje bilgileri
+- ✅ Star, fork, dil bilgileri otomatik
+- ✅ Fallback sistem (API çalışmazsa static veriler)
 
-## Learn More
+## 🎨 Kustomizasyon
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Renkler
+`tailwind.config.js` dosyasından tema renklerini değiştirebilirsiniz.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Çeviriler
+`src/i18n/locales/` klasöründen dil dosyalarını düzenleyebilirsiniz.
 
-### Code Splitting
+### Animasyonlar
+Framer Motion animasyonları her component'te özelleştirilebilir.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Proje Yapısı
 
-### Analyzing the Bundle Size
+```
+src/
+├── components/          # React componentleri
+├── hooks/              # Custom hooks
+├── i18n/               # Çeviri dosyaları
+├── assets/             # Resim ve diğer assets
+└── data/               # Static data dosyaları
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Deployment
 
-### Making a Progressive Web App
+### Vercel (Önerilen)
+```bash
+npm run build
+# Vercel'e upload edin ve environment variables ekleyin
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Netlify
+```bash
+npm run build
+# build/ klasörünü Netlify'a yükleyin
+```
 
-### Advanced Configuration
+### GitHub Pages
+```bash
+npm install --save-dev gh-pages
+# package.json'a homepage ekleyin
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔒 Güvenlik
 
-### Deployment
+- GitHub token'ı `.env` dosyasında saklanır
+- `.env` dosyası .gitignore'da yer alır
+- Production'da environment variables kullanın
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Katkıda Bulunma
 
-### `npm run build` fails to minify
+1. Fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit edin (`git commit -m 'Add amazing feature'`)
+4. Push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+## 👨‍💻 Geliştirici
+
+**Ali Altunoğlu**
+- GitHub: [@alialtunoglu](https://github.com/alialtunoglu)
+- LinkedIn: [Ali Altunoğlu](https://linkedin.com/in/alialtunoglu)
+- Medium: [@alialtunoglu](https://medium.com/@alialtunoglu)
+
+---
+
+⭐ Bu projeyi beğendiyseniz star vererek destek olabilirsiniz!
