@@ -55,7 +55,7 @@ const Education = () => {
                   <div className="space-y-2">
                     <div className="flex items-center justify-center lg:justify-start gap-2 text-blue-400 font-medium text-lg">
                       <FaGraduationCap className="text-sm" />
-                      <span>Bilgisayar Mühendisliği</span>
+                      <span>{t('education.major')}</span>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
@@ -82,9 +82,7 @@ const Education = () => {
               {/* Description */}
               <div className="mb-8">
                 <p className="text-gray-300 leading-relaxed text-center lg:text-left">
-                  Bilgisayar Mühendisliği bölümünde yazılım geliştirme, algoritma tasarımı, 
-                  veri yapıları ve makine öğrenmesi konularında derinlemesine eğitim alıyorum. 
-                  Özellikle AI/ML alanında projelere odaklanarak akademik başarımı artırıyorum.
+                  {t('education.description')}
                 </p>
               </div>
 
@@ -117,19 +115,19 @@ const Education = () => {
               {/* Activities */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-xl border border-purple-500/20">
-                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.projects')}</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.projects.title')}</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>• Makine Öğrenmesi ile Görüntü Sınıflandırma</li>
-                    <li>• Web Tabanlı Öğrenci Bilgi Sistemi</li>
-                    <li>• Algoritmik Trading Bot Geliştirme</li>
+                    {t('education.projects.projects', { returnObjects: true }).map((project, index) => (
+                      <li key={index}>• {project}</li>
+                    ))}
                   </ul>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-blue-500/10 to-cyan-600/10 rounded-xl border border-blue-500/20">
-                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.activities')}</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('education.activities.title')}</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>• Bilgisayar Mühendisliği Kulübü Üyesi</li>
-                    <li>• Hackathon Organizasyonu</li>
-                    <li>• Teknoloji Seminerleri Düzenleme</li>
+                    {t('education.activities.activities', { returnObjects: true }).map((activity, index) => (
+                      <li key={index}>• {activity}</li>
+                    ))}
                   </ul>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaCalendar, FaClock, FaEye, FaHeart, FaChevronLeft, FaChevronRight, FaSpinner } from 'react-icons/fa';
+import { FaCalendar, FaClock, FaChevronLeft, FaChevronRight, FaSpinner } from 'react-icons/fa';
 import useMediumBlogs from '../hooks/useMediumBlogs';
 
 const Blogs = () => {

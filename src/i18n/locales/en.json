@@ -5,9 +5,9 @@
     "projects": "Projects",
     "achievements": "Achievements",
     "blog": "Blog",
+    "education": "Education",
     "experience": "Experience",
     "skills": "Skills",
-    "education": "Education",
     "contact": "Contact"
   },
   "hero": {
@@ -49,6 +49,30 @@
     "title": "Achievements & Certifications",
     "subtitle": "Certificates and achievements I have obtained in my professional development journey",
     "viewCertificate": "View Certificate",
+    "viewMore": "More Certificates on LinkedIn",
+    "certificates": {
+      "ai-specialization": {
+        "title": "AI Specialization Program",
+        "issuer": "Ministry of Industry and Technology",
+        "date": "2024",
+        "description": "Selected as one of 120 participants in the exclusive Synchronous Group for the AI Specialization Program. Engaged in basic training on algorithms, data structures, operating systems, and GPU-based parallel programming.",
+        "tags": ["Artificial Intelligence", "Algorithms", "GPU Programming", "Data Structures"]
+      },
+      "docker-workshop": {
+        "title": "Docker Workshop",
+        "issuer": "Techcareer.net",
+        "date": "2024",
+        "description": "Comprehensive workshop program on Docker container technologies and microservice architectures.",
+        "tags": ["Docker", "DevOps", "Container", "Microservices"]
+      },
+      "akbank-bootcamp": {
+        "title": "Akbank Data Analysis Bootcamp",
+        "issuer": "Global AI Hub",
+        "date": "2024",
+        "description": "Intensive bootcamp program on data analysis, machine learning and Python programming.",
+        "tags": ["Data Analysis", "Python", "Machine Learning", "Bootcamp"]
+      }
+    },
     "stats": {
       "certificates": "Certificates",
       "hours": "Training Hours",
@@ -74,6 +98,30 @@
     "subtitle": "Projects and experiences I have been involved in my professional career",
     "technologies": "Technologies Used:",
     "present": "Present",
+    "promoted": "Promoted",
+    "internship": "Internship",
+    "companies": {
+      "solonport": {
+        "position": "AI Research and Developer",
+        "prevPosition": "AI R&D Long Term Intern",
+        "period": "January 2025 - Present",
+        "prevPeriod": "September 2024 - January 2025",
+        "description": "I design intelligent container placement systems using Deep Q-Learning and meta-heuristic methods, developing them as scalable services and integrating them into the corporate ASP.NET Core infrastructure.",
+        "technologies": ["Python", "Flask", "Docker", "ASP.NET Core", "Deep Q-Learning", "Genetic Algorithms"]
+      },
+      "sistek": {
+        "position": "Machine Learning Intern",
+        "period": "July 2024 - September 2024",
+        "description": "I developed LSTM-based time series models that predict monthly and annual material needs; containerized them with Docker and provided real-time predictions through a Flask-based web service.",
+        "technologies": ["Python", "LSTM", "Flask", "Docker", "Scikit-Learn"]
+      },
+      "darphane": {
+        "position": "Web Developer Intern",
+        "period": "July 2023 - August 2023",
+        "description": "I developed a PHP and MySQL-based web document management system; provided identity verification with MERNIS integration and established a request tracking infrastructure for certificate stamping processes.",
+        "technologies": ["PHP", "MySQL", "HTML/CSS", "JavaScript"]
+      }
+    },
     "stats": {
       "experience": "Years Experience",
       "projects": "Projects Completed",
@@ -88,10 +136,23 @@
   },
   "education": {
     "title": "Education",
+    "major": "Software Engineering",
     "subtitle": "My academic background and educational life",
+    "description": "I am studying in the Computer Engineering department, specializing in software development, algorithm design, data structures, and machine learning. I focus on AI/ML projects to enhance my academic achievements.",
     "courses": "Core Courses",
-    "projects": "Academic Projects",
-    "activities": "Club Activities",
+    "projects": {
+      "title": "Academic Projects",
+      "projects": [
+        "Image Classification with Machine Learning",
+        "Alzheimer's Disease Detection with Machine Learning"
+      ]
+    },
+    "activities": {
+      "title": "Club Activities",
+      "activities": [
+        "HSD KTU Club Member"
+      ]
+    },
     "stats": {
       "education": "Years Education",
       "gpa": "GPA",

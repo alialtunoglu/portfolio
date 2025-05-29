@@ -50,42 +50,6 @@ const Skills = () => {
     },
   ];
 
-  // Additional technical skills for the cloud section
-  const technicalSkills = [
-    // AI/ML Skills
-    { name: "TensorFlow", level: 90, category: "AI/ML" },
-    { name: "Keras", level: 88, category: "AI/ML" },
-    { name: "PyTorch", level: 85, category: "AI/ML" },
-    { name: "Scikit-Learn", level: 92, category: "AI/ML" },
-    { name: "Pandas", level: 95, category: "AI/ML" },
-    { name: "Numpy", level: 95, category: "AI/ML" },
-    { name: "Apache Spark", level: 80, category: "AI/ML" },
-    { name: "MLflow", level: 75, category: "AI/ML" },
-    { name: "OpenCV", level: 82, category: "AI/ML" },
-    
-    // Web Development
-    { name: "Django", level: 90, category: "Web" },
-    { name: "Flask", level: 88, category: "Web" },
-    { name: "ASP.NET", level: 85, category: "Web" },
-    { name: "Spring Boot", level: 82, category: "Web" },
-    
-    // Database
-    { name: "MySQL", level: 85, category: "Database" },
-    { name: "MongoDB", level: 80, category: "Database" },
-    { name: "PostgreSQL", level: 88, category: "Database" },
-    { name: "MsSQL", level: 82, category: "Database" },
-    
-    // Cloud & DevOps
-    { name: "Azure", level: 78, category: "Cloud" },
-    { name: "Docker", level: 85, category: "DevOps" },
-    
-    // Programming Languages
-    { name: "Python", level: 95, category: "Language" },
-    { name: "JavaScript", level: 88, category: "Language" },
-    { name: "Java", level: 82, category: "Language" },
-    { name: "C#", level: 80, category: "Language" }
-  ];
-
   return (
     <section className="py-20 px-6 bg-gray-900/30">
       <div className="max-w-6xl mx-auto">

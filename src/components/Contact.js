@@ -44,33 +44,6 @@ const Contact = () => {
     }
   ];
 
-  const socialLinks = [
-    {
-      icon: FaGithub,
-      name: 'GitHub',
-      url: 'https://github.com/alialtunoglu',
-      color: 'hover:text-gray-400'
-    },
-    {
-      icon: FaLinkedin,
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/alialtunoglu',
-      color: 'hover:text-blue-400'
-    },
-    {
-      icon: FaMedium,
-      name: 'Medium',
-      url: 'https://medium.com/@alialtunoglu02',
-      color: 'hover:text-green-400'
-    },
-    {
-      icon: FaStackOverflow,
-      name: 'Stack Overflow',
-      url: 'https://stackoverflow.com/users/21611993/ali-altuno%c4%9flu',
-      color: 'hover:text-orange-400'
-    }
-  ];
-
   const handleChange = (e) => {
     setFormData({
       ...formData,

@@ -15,9 +15,9 @@ const Navbar = () => {
     { key: 'projects', href: '#projects' },
     { key: 'achievements', href: '#achievements' },
     { key: 'blog', href: '#blogs' },
+    { key: 'education', href: '#education' },
     { key: 'experience', href: '#experience' },
     { key: 'skills', href: '#skills' },
-    { key: 'education', href: '#education' },
     { key: 'contact', href: '#contact' }
   ], []);
 

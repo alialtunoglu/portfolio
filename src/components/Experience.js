@@ -13,32 +13,21 @@ const Experience = () => {
 
   const experiences = [
     {
+      id: "solonport",
       company: "SolonPort",
-      position: "AI Research and Developer",
-      prevPosition: "AI R&D Long Term Intern",
-      period: "Ocak 2025 - " + t('experience.present'),
-      prevPeriod: "Eylül 2024 - Ocak 2025",
       location: "İstanbul, Türkiye",
-      description: "Deep Q-Learning ve meta-sezgisel yöntemler ile akıllı konteyner yerleştirme sistemleri tasarlıyor, bunları ölçeklenebilir servisler hâlinde geliştirip kurumsal ASP.NET Core altyapısına entegre ediyorum.",
-      technologies: ["Python", "Flask", "Docker", "ASP.NET Core", "Deep Q-Learning", "Genetic Algorithms"],
       logo: solonportLogo
     },
     {
+      id: "sistek",
       company: "Sistek",
-      position: "Makine Öğrenimi Stajyeri",
-      period: "Temmuz 2024 - Eylül 2024",
-      location: "İstanbul, Türkiye", 
-      description: "Aylık ve yıllık malzeme ihtiyacını öngören LSTM tabanlı zaman serisi modelleri geliştirdim; Docker ile konteynerleştirip Flask tabanlı web servisi üzerinden gerçek zamanlı tahmin sağladım.",
-      technologies: ["Python", "LSTM", "Flask", "Docker", "Scikit-Learn"],
+      location: "İstanbul, Türkiye",
       logo: sistekLogo
     },
     {
+      id: "darphane",
       company: "Darphane",
-      position: "Web Geliştirici Stajyeri",
-      period: "Temmuz 2023 - Ağustos 2023",
       location: "İstanbul, Türkiye",
-      description: "PHP ve MySQL tabanlı web tabanlı bir belge yönetim sistemi geliştirdim; MERNİS entegrasyonu ile kimlik doğrulama sağladım ve sertifika damgalama süreçleri için talep takip altyapısı kurdum.",
-      technologies: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
       logo: darphaneLogo
     }
   ];
@@ -95,12 +84,12 @@ const Experience = () => {
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-white mb-1">
-                            {exp.position}
+                            {t(`experience.companies.${exp.id}.position`)}
                           </h3>
-                          {exp.prevPosition && (
+                          {t(`experience.companies.${exp.id}.prevPosition`, { returnObjects: true }) && (
                             <div className="mb-2">
                               <div className="text-sm text-gray-400 italic">
-                                Terfi edildi: {exp.prevPosition}
+                                {t('experience.promoted')}: {t(`experience.companies.${exp.id}.prevPosition`)}
                               </div>
                             </div>
                           )}
@@ -111,15 +100,15 @@ const Experience = () => {
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <FaCalendar className="text-xs" />
-                              {exp.period}
+                              {t(`experience.companies.${exp.id}.period`)}
                             </div>
                             <span>{exp.location}</span>
                           </div>
-                          {exp.prevPeriod && (
+                          {t(`experience.companies.${exp.id}.prevPeriod`, { returnObjects: true }) && (
                             <div className="flex items-center gap-4 text-xs text-gray-500 mt-1">
                               <div className="flex items-center gap-1">
                                 <FaCalendar className="text-xs" />
-                                Stajyerlik: {exp.prevPeriod}
+                                {t('experience.internship')}: {t(`experience.companies.${exp.id}.prevPeriod`)}
                               </div>
                             </div>
                           )}
@@ -128,7 +117,7 @@ const Experience = () => {
 
                       {/* Description */}
                       <p className="text-gray-300 leading-relaxed mb-6">
-                        {exp.description}
+                        {t(`experience.companies.${exp.id}.description`)}
                       </p>
 
                       {/* Technologies */}
@@ -138,7 +127,7 @@ const Experience = () => {
                           <span>{t('experience.technologies')}</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.map((tech) => (
+                          {t(`experience.companies.${exp.id}.technologies`, { returnObjects: true }).map((tech) => (
                             <span
                               key={tech}
                               className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30"

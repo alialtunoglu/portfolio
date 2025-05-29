@@ -46,14 +46,14 @@ function App() {
           <div id="blogs">
             <Blogs />
           </div>
+          <div id="education">
+            <Education />
+          </div>
           <div id="experience">
             <Experience />
           </div>
           <div id="skills">
             <Skills />
-          </div>
-          <div id="education">
-            <Education />
           </div>
           <div id="contact">
             <Contact />

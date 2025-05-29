@@ -4,10 +4,10 @@
     "about": "Hakkımda",
     "projects": "Projeler",
     "achievements": "Sertifikalar",
-    "skills": "Yetenekler",
-    "experience": "Deneyim",
-    "education": "Eğitim",
     "blog": "Blog",
+    "education": "Eğitim",
+    "experience": "Deneyim",
+    "skills": "Yetenekler",
     "contact": "İletişim"
   },
   "hero": {
@@ -49,6 +49,30 @@
     "title": "Başarılar ve Sertifikalar",
     "subtitle": "Profesyonel gelişim yolculuğumda elde ettiğim sertifikalar ve başarılar",
     "viewCertificate": "Sertifikayı Görüntüle",
+    "viewMore": "Daha Fazla Sertifika İçin LinkedIn",
+    "certificates": {
+      "ai-specialization": {
+        "title": "AI Specialization Program",
+        "issuer": "T.C. Sanayi ve Teknoloji Bakanlığı",
+        "date": "2024",
+        "description": "AI Uzmanlık Programı'nın özel Senkron Grup'u için 120 katılımcı arasından seçildim. Algoritmalar, veri yapıları, işletim sistemleri ve GPU tabanlı paralel programlama konularında temel eğitim aldım.",
+        "tags": ["Yapay Zeka", "Algoritmalar", "GPU Programming", "Veri Yapıları"]
+      },
+      "docker-workshop": {
+        "title": "Docker Workshop",
+        "issuer": "Techcareer.net",
+        "date": "2024",
+        "description": "Docker konteyner teknolojileri ve mikroservis mimarileri üzerine kapsamlı workshop programı.",
+        "tags": ["Docker", "DevOps", "Konteyner", "Mikroservis"]
+      },
+      "akbank-bootcamp": {
+        "title": "Akbank Data Analysis Bootcamp",
+        "issuer": "Global AI Hub",
+        "date": "2024",
+        "description": "Veri analizi, makine öğrenmesi ve Python programlama konularında yoğun bootcamp programı.",
+        "tags": ["Veri Analizi", "Python", "Machine Learning", "Bootcamp"]
+      }
+    },
     "stats": {
       "certificates": "Sertifika",
       "hours": "Eğitim Saati",
@@ -74,6 +98,30 @@
     "subtitle": "Profesyonel kariyerimde yer aldığım projeler ve deneyimlerim",
     "technologies": "Kullanılan Teknolojiler:",
     "present": "Günümüz",
+    "promoted": "Terfi edildi",
+    "internship": "Stajyerlik",
+    "companies": {
+      "solonport": {
+        "position": "AI Research and Developer",
+        "prevPosition": "AI R&D Long Term Intern",
+        "period": "Ocak 2025 - Günümüz",
+        "prevPeriod": "Eylül 2024 - Ocak 2025",
+        "description": "Deep Q-Learning ve meta-sezgisel yöntemler ile akıllı konteyner yerleştirme sistemleri tasarlıyor, bunları ölçeklenebilir servisler hâlinde geliştirip kurumsal ASP.NET Core altyapısına entegre ediyorum.",
+        "technologies": ["Python", "Flask", "Docker", "ASP.NET Core", "Deep Q-Learning", "Genetic Algorithms"]
+      },
+      "sistek": {
+        "position": "Makine Öğrenimi Stajyeri",
+        "period": "Temmuz 2024 - Eylül 2024",
+        "description": "Aylık ve yıllık malzeme ihtiyacını öngören LSTM tabanlı zaman serisi modelleri geliştirdim; Docker ile konteynerleştirip Flask tabanlı web servisi üzerinden gerçek zamanlı tahmin sağladım.",
+        "technologies": ["Python", "LSTM", "Flask", "Docker", "Scikit-Learn"]
+      },
+      "darphane": {
+        "position": "Web Geliştirici Stajyeri",
+        "period": "Temmuz 2023 - Ağustos 2023",
+        "description": "PHP ve MySQL tabanlı web tabanlı bir belge yönetim sistemi geliştirdim; MERNİS entegrasyonu ile kimlik doğrulama sağladım ve sertifika damgalama süreçleri için talep takip altyapısı kurdum.",
+        "technologies": ["PHP", "MySQL", "HTML/CSS", "JavaScript"]
+      }
+    },
     "stats": {
       "experience": "Yıl Deneyim",
       "projects": "Proje Tamamlandı",
@@ -88,10 +136,24 @@
   },
   "education": {
     "title": "Eğitim",
+    "major": "Yazılım Mühendisliği",
     "subtitle": "Akademik geçmişim ve eğitim hayatım",
+    "description": "Bilgisayar Mühendisliği bölümünde yazılım geliştirme, algoritma tasarımı, veri yapıları ve makine öğrenmesi konularında derinlemesine eğitim alıyorum. Özellikle AI/ML alanında projelere odaklanarak akademik başarımı artırıyorum.",
     "courses": "Ana Dersler",
-    "projects": "Akademik Projeler",
-    "activities": "Kulüp Aktiviteleri",
+    "projects": {
+      "title": "Akademik Projeler",
+      "projects": [
+        "Makine Öğrenmesi ile Görüntü Sınıflandırma",
+        "Alzheimer'ın Erken Tanısı için Makine Öğrenmesi"
+      ]
+    },
+    "activities": {
+      "title": "Kulüp Aktiviteleri",
+      "activities": [
+        "HSD KTU Kulübü Üyesi"
+        
+      ]
+    },
     "stats": {
       "education": "Yıl Eğitim",
       "gpa": "GPA",
