@@ -2,23 +2,30 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { 
-  FaPython, 
-  FaJs, 
   FaDocker, 
-  FaReact, 
-  FaNodeJs, 
-  FaAws,
   FaCode,
   FaMobile,
-  FaCloud
+  FaCloud,
+  FaMicrosoft,
 } from 'react-icons/fa';
 import { 
   SiDjango, 
-  SiSpring, 
-  SiFirebase, 
+  SiFlask,
+  SiSpringboot, 
   SiKubernetes, 
   SiTensorflow, 
-  SiPostgresql
+  SiPytorch,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
+  SiOpencv,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiKeras,
+  SiApachespark,
+  SiDotnet,
+  SiMlflow,
 } from 'react-icons/si';
 
 const WhatIDo = () => {
@@ -26,18 +33,153 @@ const WhatIDo = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
 
   const technologies = [
-    { icon: FaPython, name: "Python", description: "AI/ML geliştirme ve backend uygulamalar için" },
-    { icon: SiDjango, name: "Django", description: "Güçlü ve ölçeklenebilir web uygulamaları" },
-    { icon: FaJs, name: "JavaScript", description: "Modern web uygulamaları ve interaktif arayüzler" },
-    { icon: FaReact, name: "React", description: "Dinamik ve responsive kullanıcı arayüzleri" },
-    { icon: FaNodeJs, name: "Node.js", description: "Hızlı ve verimli backend servisler" },
-    { icon: SiSpring, name: "Spring", description: "Enterprise Java uygulamaları" },
-    { icon: FaDocker, name: "Docker", description: "Konteyner tabanlı uygulama deployment" },
-    { icon: SiKubernetes, name: "Kubernetes", description: "Orkestrali konteyner yönetimi" },
-    { icon: FaAws, name: "AWS", description: "Bulut altyapı ve servisleri" },
-    { icon: SiFirebase, name: "Firebase", description: "Gerçek zamanlı veritabanı ve hosting" },
-    { icon: SiTensorflow, name: "TensorFlow", description: "Makine öğrenmesi ve derin öğrenme" },
-    { icon: SiPostgresql, name: "PostgreSQL", description: "İlişkisel veritabanı yönetimi" }
+    // AI/ML Technologies
+    { 
+      icon: SiTensorflow, 
+      name: "TensorFlow", 
+      description: "Makine öğrenmesi ve derin öğrenme framework'ü",
+      url: "https://tensorflow.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiPytorch, 
+      name: "PyTorch", 
+      description: "Derin öğrenme ve neural network framework'ü",
+      url: "https://pytorch.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiKeras, 
+      name: "Keras", 
+      description: "Yüksek seviyeli neural network API",
+      url: "https://keras.io",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiScikitlearn, 
+      name: "Scikit-Learn", 
+      description: "Python makine öğrenmesi kütüphanesi",
+      url: "https://scikit-learn.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiPandas, 
+      name: "Pandas", 
+      description: "Veri analizi ve manipülasyon kütüphanesi",
+      url: "https://pandas.pydata.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiNumpy, 
+      name: "NumPy", 
+      description: "Bilimsel hesaplama kütüphanesi",
+      url: "https://numpy.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiOpencv, 
+      name: "OpenCV", 
+      description: "Bilgisayar görme kütüphanesi",
+      url: "https://opencv.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiApachespark, 
+      name: "Apache Spark", 
+      description: "Büyük veri işleme framework'ü",
+      url: "https://spark.apache.org",
+      category: "AI/ML"
+    },
+    { 
+      icon: SiMlflow, 
+      name: "MLflow", 
+      description: "ML lifecycle yönetim platformu",
+      url: "https://mlflow.org",
+      category: "AI/ML"
+    },
+
+    // Web Frameworks
+    { 
+      icon: SiDjango, 
+      name: "Django", 
+      description: "Python web framework'ü",
+      url: "https://djangoproject.com",
+      category: "Web"
+    },
+    { 
+      icon: SiFlask, 
+      name: "Flask", 
+      description: "Hafif Python web framework'ü",
+      url: "https://flask.palletsprojects.com",
+      category: "Web"
+    },
+    { 
+      icon: SiDotnet, 
+      name: "ASP.NET", 
+      description: "Microsoft web framework'ü",
+      url: "https://dotnet.microsoft.com/apps/aspnet",
+      category: "Web"
+    },
+    { 
+      icon: SiSpringboot, 
+      name: "Spring Boot", 
+      description: "Java web framework'ü",
+      url: "https://spring.io/projects/spring-boot",
+      category: "Web"
+    },
+
+    // Databases
+    { 
+      icon: SiMysql, 
+      name: "MySQL", 
+      description: "İlişkisel veritabanı yönetim sistemi",
+      url: "https://mysql.com",
+      category: "Database"
+    },
+    { 
+      icon: SiMongodb, 
+      name: "MongoDB", 
+      description: "NoSQL doküman veritabanı",
+      url: "https://mongodb.com",
+      category: "Database"
+    },
+    { 
+      icon: SiPostgresql, 
+      name: "PostgreSQL", 
+      description: "Gelişmiş açık kaynak veritabanı",
+      url: "https://postgresql.org",
+      category: "Database"
+    },
+    { 
+      icon: FaMicrosoft, 
+      name: "MS SQL", 
+      description: "Microsoft SQL Server",
+      url: "https://microsoft.com/en-us/sql-server",
+      category: "Database"
+    },
+
+    // Cloud & DevOps
+    { 
+      icon: FaCloud, 
+      name: "Azure", 
+      description: "Microsoft bulut platformu",
+      url: "https://azure.microsoft.com",
+      category: "Cloud & DevOps"
+    },
+    { 
+      icon: FaDocker, 
+      name: "Docker", 
+      description: "Konteyner teknolojisi",
+      url: "https://docker.com",
+      category: "Cloud & DevOps"
+    },
+    { 
+      icon: SiKubernetes, 
+      name: "Kubernetes", 
+      description: "Konteyner teknolojisi",
+      url: "https://kubernetes.io/",
+      category: "Cloud & DevOps"
+    }
   ];
 
   const services = [
@@ -58,6 +200,22 @@ const WhatIDo = () => {
     }
   ];
 
+  // Group technologies by category
+  const groupedTechnologies = technologies.reduce((acc, tech) => {
+    if (!acc[tech.category]) {
+      acc[tech.category] = [];
+    }
+    acc[tech.category].push(tech);
+    return acc;
+  }, {});
+
+  const categoryColors = {
+    'AI/ML': 'from-blue-500 to-cyan-500',
+    'Web': 'from-purple-500 to-pink-500',
+    'Database': 'from-orange-500 to-red-500',
+    'Cloud & DevOps': 'from-indigo-500 to-blue-500',
+  };
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -76,7 +234,7 @@ const WhatIDo = () => {
           </p>
         </motion.div>
 
-        {/* Technologies Grid */}
+        {/* Technologies in 2x2 Grid */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -87,35 +245,70 @@ const WhatIDo = () => {
           <h3 className="text-2xl font-semibold mb-8 text-center text-gray-200">
             {t('whatido.technologies')}
           </h3>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {Object.entries(groupedTechnologies).map(([category, techs], categoryIndex) => (
               <motion.div
-                key={tech.name}
+                key={category}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 viewport={{ once: true }}
-                onMouseEnter={() => setHoveredTech(tech)}
-                onMouseLeave={() => setHoveredTech(null)}
-                className="relative group"
+                className="p-6 bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
               >
-                <div className="p-4 bg-gray-800/50 hover:bg-gray-700/50 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600">
-                  <tech.icon className="text-3xl lg:text-4xl text-gray-300 group-hover:text-white mx-auto transition-colors duration-300" />
+                {/* Category Header */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className={`h-1 w-8 bg-gradient-to-r ${categoryColors[category]} rounded-full`}></div>
+                  <h4 className="text-lg font-semibold text-gray-200">{category}</h4>
+                  <div className={`h-1 flex-1 bg-gradient-to-r ${categoryColors[category]} rounded-full opacity-30`}></div>
                 </div>
                 
-                {/* Tooltip */}
-                {hoveredTech === tech && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute -top-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-10 w-48 text-center"
-                  >
-                    <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
-                    <p className="text-xs text-gray-300">{tech.description}</p>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
-                  </motion.div>
-                )}
+                {/* Technology Icons Grid */}
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {techs.map((tech, index) => (
+                    <motion.a
+                      key={tech.name}
+                      href={tech.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.05 }}
+                      viewport={{ once: true }}
+                      onMouseEnter={() => setHoveredTech(tech)}
+                      onMouseLeave={() => setHoveredTech(null)}
+                      className="relative group cursor-pointer"
+                    >
+                      <div className={`w-16 h-16 bg-gray-800/50 hover:bg-gradient-to-r hover:${categoryColors[category]} hover:bg-opacity-20 rounded-xl transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600 flex items-center justify-center`}>
+                        <tech.icon className="text-2xl text-gray-300 group-hover:text-white transition-colors duration-300" />
+                      </div>
+                      
+                      {/* Tooltip */}
+                      {hoveredTech === tech && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                          className="absolute -top-24 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-20 w-48 text-center border border-gray-600"
+                        >
+                          <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
+                          <p className="text-xs text-gray-300">{tech.description}</p>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                        </motion.div>
+                      )}
+                    </motion.a>
+                  ))}
+                </div>
+
+                {/* Category Stats */}
+                <div className="mt-6 text-center">
+                  <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${categoryColors[category]} bg-opacity-20 rounded-full border border-gray-600/30`}>
+                    <div className={`text-xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent`}>
+                      {techs.length}
+                    </div>
+                    <div className="text-gray-400 text-sm">teknoloji</div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -138,9 +331,9 @@ const WhatIDo = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full">
+              <div className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full text-center">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 mx-auto">
                     <service.icon className="text-3xl text-blue-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -152,6 +345,24 @@ const WhatIDo = () => {
                 </p>
               </div>
             </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Summary Stats */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+          {Object.entries(groupedTechnologies).map(([category, techs]) => (
+            <div key={category} className="text-center p-4 bg-gray-800/30 rounded-xl">
+              <div className={`text-2xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent mb-1`}>
+                {techs.length}+
+              </div>
+              <div className="text-gray-400 text-xs">{category}</div>
+            </div>
           ))}
         </motion.div>
       </div>

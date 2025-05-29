@@ -73,7 +73,7 @@ const Education = () => {
                 {/* GPA Badge */}
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-600/20 rounded-2xl flex flex-col items-center justify-center border border-green-500/30">
-                    <div className="text-2xl font-bold text-green-400">3.2</div>
+                    <div className="text-2xl font-bold text-green-400">3.52</div>
                     <div className="text-xs text-gray-400">GPA</div>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const Education = () => {
             <div className="text-gray-400 text-sm">{t('education.stats.education')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
-            <div className="text-3xl font-bold text-purple-400 mb-2">3.2</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">3.52</div>
             <div className="text-gray-400 text-sm">{t('education.stats.gpa')}</div>
           </div>
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">

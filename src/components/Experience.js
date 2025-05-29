@@ -29,7 +29,7 @@ const Experience = () => {
       period: "Temmuz 2024 - Eylül 2024",
       location: "İstanbul, Türkiye", 
       description: "Aylık ve yıllık malzeme ihtiyacını öngören LSTM tabanlı zaman serisi modelleri geliştirdim; Docker ile konteynerleştirip Flask tabanlı web servisi üzerinden gerçek zamanlı tahmin sağladım.",
-      technologies: ["Python", "LSTM", "Flask", "Docker", "TensorFlow"],
+      technologies: ["Python", "LSTM", "Flask", "Docker", "Scikit-Learn"],
       logo: sistekLogo
     },
     {

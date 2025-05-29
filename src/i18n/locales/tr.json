@@ -21,16 +21,16 @@
     "subtitle": "Modern teknolojiler kullanarak akıllı sistemler ve güçlü backend çözümleri geliştiriyorum",
     "technologies": "Kullandığım Teknolojiler",
     "service1": {
-      "title": "Web Arayüzleri Geliştiriyorum",
-      "description": "Modern React, Vue.js ve vanilla JavaScript kullanarak responsive web uygulamaları geliştiriyorum."
+      "title": "AI/ML Sistemleri Geliştiriyorum",
+      "description": "TensorFlow, PyTorch ve scikit-learn kullanarak makine öğrenmesi modelleri ve akıllı sistemler geliştiriyorum."
     },
     "service2": {
-      "title": "PWA Uygulamaları Geliştiriyorum",
-      "description": "Progressive Web Apps ile mobil deneyimi web üzerinde sunuyorum."
+      "title": "Backend API Geliştiriyorum",
+      "description": "Django, Flask ve ASP.NET Core ile güçlü, ölçeklenebilir ve güvenli backend servisler oluşturuyorum."
     },
     "service3": {
-      "title": "AWS / Firebase Entegrasyonları",
-      "description": "Bulut servisleri ile güvenli, ölçeklenebilir ve hızlı çözümler geliştiriyorum."
+      "title": "Veri Analizi ve İşleme",
+      "description": "Büyük veri setlerini analiz ederek iş zekası çözümleri ve öngörü modelleri geliştiriyorum."
     }
   },
   "openSourceProjects": {
@@ -100,26 +100,25 @@
     }
   },
   "contact": {
-    "email": "Email",
-    "phone": "Telefon",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
     "title": "İletişim",
-    "subtitle": "Benimle iletişime geçmek için aşağıdaki bilgileri kullanabilir veya formu doldurabilirsiniz",
+    "subtitle": "Projeleriniz hakkında konuşalım! Size nasıl yardımcı olabileceğimi öğrenmek için iletişime geçin.",
     "info": "İletişim Bilgileri",
+    "email": "E-posta",
+    "phone": "Telefon",
     "location": "Konum",
     "socialMedia": "Sosyal Medya",
-    "quickResponse": "Hızlı Yanıt",
-    "quickResponseText": "Genellikle 24 saat içinde geri dönüş yapıyorum. Acil durumlar için LinkedIn üzerinden ulaşabilirsiniz.",
     "sendMessage": "Mesaj Gönder",
     "name": "Ad Soyad",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "sendBtn": "Gönder",
     "namePlaceholder": "Adınızı girin",
     "emailPlaceholder": "E-posta adresinizi girin",
-    "subject": "Konu",
-    "subjectPlaceholder": "Mesaj konusunu girin",
-    "message": "Mesaj",
-    "messagePlaceholder": "Mesajınızı buraya yazın...",
-    "sendBtn": "Mesajı Gönder"
+    "subjectPlaceholder": "Konu başlığını girin",
+    "messagePlaceholder": "Mesajınızı yazın...",
+    "quickResponse": "Hızlı Yanıt",
+    "quickResponseText": "Genellikle 24 saat içinde geri dönüş yapıyorum. Acil durumlar için telefon numaramı kullanabilirsiniz.",
+    "workingHours": "Çalışma Saatleri"
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."

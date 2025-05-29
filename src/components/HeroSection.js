@@ -9,8 +9,8 @@ const HeroSection = () => {
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/alialtunoglu", label: "GitHub" },
     { icon: FaLinkedin, href: "https://linkedin.com/in/alialtunoglu", label: "LinkedIn" },
-    { icon: FaMedium, href: "https://medium.com/@alialtunoglu", label: "Medium" },
-    { icon: FaStackOverflow, href: "https://stackoverflow.com/users/alialtunoglu", label: "Stack Overflow" }
+    { icon: FaMedium, href: "https://medium.com/@alialtunoglu02", label: "Medium" },
+    { icon: FaStackOverflow, href: "https://stackoverflow.com/users/21611993/ali-altuno%c4%9flu", label: "Stack Overflow" }
   ];
 
   return (
@@ -63,10 +63,14 @@ const HeroSection = () => {
               <FaEnvelope className="text-sm group-hover:animate-bounce" />
               {t('hero.contactBtn')}
             </button>
-            <button className="flex items-center gap-2 border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:bg-gray-800">
+            <a 
+              href="/Ali AltunoğluResume.pdf" 
+              download="Ali_Altunoglu_CV.pdf"
+              className="flex items-center gap-2 border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:bg-gray-800"
+            >
               <FaDownload className="text-sm" />
               {t('hero.downloadCV')}
-            </button>
+            </a>
           </motion.div>
 
           {/* Social Links */}

@@ -8,6 +8,7 @@ import {
   FaLinkedin, 
   FaGithub, 
   FaMedium,
+  FaStackOverflow,
   FaPaperPlane,
   FaUser,
   FaComment
@@ -26,8 +27,8 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: t('contact.email'),
-      value: 'ali.altunoglu@example.com',
-      link: 'mailto:ali.altunoglu@example.com'
+      value: 'alialtunoglu02@gmail.com',
+      link: 'mailto:alialtunoglu02@gmail.com'
     },
     {
       icon: FaPhone,
@@ -59,8 +60,14 @@ const Contact = () => {
     {
       icon: FaMedium,
       name: 'Medium',
-      url: 'https://medium.com/@alialtunoglu',
+      url: 'https://medium.com/@alialtunoglu02',
       color: 'hover:text-green-400'
+    },
+    {
+      icon: FaStackOverflow,
+      name: 'Stack Overflow',
+      url: 'https://stackoverflow.com/users/21611993/ali-altuno%c4%9flu',
+      color: 'hover:text-orange-400'
     }
   ];
 
@@ -137,29 +144,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">{t('contact.socialMedia')}</h3>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.1, y: -5 }}
-                    className={`p-4 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg transition-all duration-300 text-gray-300 ${social.color}`}
-                  >
-                    <social.icon className="text-2xl" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
             {/* Quick Response Info */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -172,6 +156,33 @@ const Contact = () => {
               <p className="text-gray-300 text-sm">
                 {t('contact.quickResponseText')}
               </p>
+            </motion.div>
+
+            {/* Additional Contact Info */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="p-6 bg-gray-800/30 rounded-2xl"
+            >
+              <h4 className="text-lg font-semibold text-white mb-4">
+                {t('contact.workingHours')}
+              </h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Pazartesi - Cuma</span>
+                  <span>09:00 - 18:00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Cumartesi</span>
+                  <span>10:00 - 16:00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Pazar</span>
+                  <span>Kapalı</span>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 

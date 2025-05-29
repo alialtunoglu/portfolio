@@ -21,16 +21,16 @@
     "subtitle": "I develop intelligent systems and robust backend solutions using modern technologies",
     "technologies": "Technologies I Use",
     "service1": {
-      "title": "Web Interface Development",
-      "description": "I develop responsive web applications using modern React, Vue.js and vanilla JavaScript."
+      "title": "AI/ML Systems Development",
+      "description": "I develop machine learning models and intelligent systems using TensorFlow, PyTorch and scikit-learn."
     },
     "service2": {
-      "title": "PWA Application Development",
-      "description": "I deliver mobile experience on the web with Progressive Web Apps."
+      "title": "Backend API Development",
+      "description": "I create powerful, scalable and secure backend services with Django, Flask and ASP.NET Core."
     },
     "service3": {
-      "title": "AWS / Firebase Integrations",
-      "description": "I develop secure, scalable and fast solutions with cloud services."
+      "title": "Data Analysis & Processing",
+      "description": "I analyze large datasets to develop business intelligence solutions and predictive models."
     }
   },
   "openSourceProjects": {
@@ -100,26 +100,25 @@
     }
   },
   "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk about your projects! Get in touch to learn how I can help you.",
+    "info": "Contact Information",
     "email": "Email",
     "phone": "Phone",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "title": "Contact",
-    "subtitle": "You can use the information below or fill out the form to contact me",
-    "info": "Contact Information",
     "location": "Location",
     "socialMedia": "Social Media",
-    "quickResponse": "Quick Response",
-    "quickResponseText": "I usually respond within 24 hours. For urgent matters, you can reach me through LinkedIn.",
     "sendMessage": "Send Message",
     "name": "Full Name",
-    "namePlaceholder": "Enter your name",
-    "emailPlaceholder": "Enter your email address",
     "subject": "Subject",
-    "subjectPlaceholder": "Enter message subject",
     "message": "Message",
-    "messagePlaceholder": "Write your message here...",
-    "sendBtn": "Send Message"
+    "sendBtn": "Send",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "subjectPlaceholder": "Enter subject",
+    "messagePlaceholder": "Write your message...",
+    "quickResponse": "Quick Response",
+    "quickResponseText": "I usually respond within 24 hours. For urgent matters, you can use my phone number.",
+    "workingHours": "Working Hours"
   },
   "footer": {
     "rights": "All rights reserved."

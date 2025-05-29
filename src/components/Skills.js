@@ -1,33 +1,89 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBrain, FaServer, FaCode } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { FaBrain, FaServer, FaCode, FaDatabase, FaCloud } from 'react-icons/fa';
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   const skills = [
     {
-      category: "Artificial Intelligence",
+      category: "AI/ML",
       icon: FaBrain,
       percentage: 90,
       color: "from-blue-500 to-cyan-500",
       description: "Machine Learning, Deep Learning, TensorFlow, PyTorch",
-      details: ["Neural Networks", "Computer Vision", "NLP", "MLOps"]
+      details: ["MLOps","Computer Vision", "NLP","Machine/Deep Learning", "Data Science/Analysis", "Reinforcement Learning"]
+
     },
     {
       category: "Backend Development", 
       icon: FaServer,
       percentage: 85,
       color: "from-purple-500 to-pink-500",
-      description: "Django, FastAPI, Node.js, Spring Boot, PostgreSQL",
-      details: ["REST API", "Microservices", "Database Design", "Docker"]
+      description: "Django, Flask, ASP.NET, Spring Boot",
+      details: ["Django", "Flask", "ASP.NET", "Spring Boot", "RESTful APIs", "Microservices"]
     },
     {
       category: "Programming Languages",
       icon: FaCode,
       percentage: 88,
       color: "from-green-500 to-emerald-500",
-      description: "Python, JavaScript, Java, Go, TypeScript",
-      details: ["Python", "JavaScript", "Java", "Go", "TypeScript"]
-    }
+      description: "Python, JavaScript, Java, C#",
+      details: ["Python", "Java", "C#", "JavaScript", "PHP", "C/C++"]
+    },
+    {
+      category: "Database Systems",
+      icon: FaDatabase,
+      percentage: 82,
+      color: "from-orange-500 to-red-500",
+      description: "SQL & NoSQL Database Management",
+      details: ["MySQL", "MongoDB", "PostgreSQL", "MsSQL", "Redis", "Database Design"]
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: FaCloud,
+      percentage: 78,
+      color: "from-indigo-500 to-blue-500",
+      description: "Cloud Services & Container Technologies",
+      details: ["Azure", "Docker", "Kubernetes", "CI/CD", "Git", "Linux"]
+    },
+  ];
+
+  // Additional technical skills for the cloud section
+  const technicalSkills = [
+    // AI/ML Skills
+    { name: "TensorFlow", level: 90, category: "AI/ML" },
+    { name: "Keras", level: 88, category: "AI/ML" },
+    { name: "PyTorch", level: 85, category: "AI/ML" },
+    { name: "Scikit-Learn", level: 92, category: "AI/ML" },
+    { name: "Pandas", level: 95, category: "AI/ML" },
+    { name: "Numpy", level: 95, category: "AI/ML" },
+    { name: "Apache Spark", level: 80, category: "AI/ML" },
+    { name: "MLflow", level: 75, category: "AI/ML" },
+    { name: "OpenCV", level: 82, category: "AI/ML" },
+    
+    // Web Development
+    { name: "Django", level: 90, category: "Web" },
+    { name: "Flask", level: 88, category: "Web" },
+    { name: "ASP.NET", level: 85, category: "Web" },
+    { name: "Spring Boot", level: 82, category: "Web" },
+    
+    // Database
+    { name: "MySQL", level: 85, category: "Database" },
+    { name: "MongoDB", level: 80, category: "Database" },
+    { name: "PostgreSQL", level: 88, category: "Database" },
+    { name: "MsSQL", level: 82, category: "Database" },
+    
+    // Cloud & DevOps
+    { name: "Azure", level: 78, category: "Cloud" },
+    { name: "Docker", level: 85, category: "DevOps" },
+    
+    // Programming Languages
+    { name: "Python", level: 95, category: "Language" },
+    { name: "JavaScript", level: 88, category: "Language" },
+    { name: "Java", level: 82, category: "Language" },
+    { name: "C#", level: 80, category: "Language" }
   ];
 
   return (
@@ -41,10 +97,10 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Skills & Proficiency
+            {t('skills.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Teknik yetkinliklerim ve uzmanlık alanlarım
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -77,7 +133,7 @@ const Skills = () => {
                       {skill.percentage}%
                     </div>
                     <div className="text-sm text-gray-400">
-                      Yetkinlik
+                      {t('skills.proficiency')}
                     </div>
                   </div>
                 </div>
@@ -98,7 +154,7 @@ const Skills = () => {
                 </div>
 
                 {/* Skill Details */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {skill.details.map((detail, detailIndex) => (
                     <motion.div
                       key={detail}
@@ -117,56 +173,36 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Technical Skills Cloud */}
+        {/* Language Skills */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-20"
+          className="mt-16"
         >
-          <h3 className="text-2xl font-bold text-center text-white mb-12">
-            Teknik Yetkinlikler
+          <h3 className="text-2xl font-bold text-center text-white mb-8">
+            Language Skills
           </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { name: "Python", level: 95 },
-              { name: "JavaScript", level: 90 },
-              { name: "Django", level: 90 },
-              { name: "React", level: 85 },
-              { name: "TensorFlow", level: 88 },
-              { name: "PostgreSQL", level: 85 },
-              { name: "Docker", level: 80 },
-              { name: "Kubernetes", level: 75 },
-              { name: "AWS", level: 78 },
-              { name: "Git", level: 92 },
-              { name: "Linux", level: 85 },
-              { name: "REST API", level: 90 }
-            ].map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="p-4 bg-gray-800/40 hover:bg-gray-700/40 rounded-xl transition-all duration-300 text-center border border-gray-700/30 hover:border-gray-600/30">
-                  <div className="text-white font-medium mb-2">{tech.name}</div>
-                  <div className="w-full bg-gray-700/50 rounded-full h-2">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${tech.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.05 + 0.3 }}
-                      viewport={{ once: true }}
-                      className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-                    ></motion.div>
-                  </div>
-                  <div className="text-xs text-gray-400 mt-1">{tech.level}%</div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="p-6 bg-gray-800/40 rounded-xl border border-gray-700/30">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-white font-medium">Turkish</span>
+                <span className="text-gray-400">Native</span>
+              </div>
+              <div className="w-full bg-gray-700/50 rounded-full h-2">
+                <div className="w-full h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
+              </div>
+            </div>
+            <div className="p-6 bg-gray-800/40 rounded-xl border border-gray-700/30">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-white font-medium">English</span>
+                <span className="text-gray-400">B1 (Intermediate)</span>
+              </div>
+              <div className="w-full bg-gray-700/50 rounded-full h-2">
+                <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
