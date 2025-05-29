@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaUniversity, FaCalendar, FaMapMarker, FaGraduationCap } from 'react-icons/fa';
+import { FaCalendar, FaMapMarker, FaGraduationCap } from 'react-icons/fa';
 
 // Import university logo
 import ktuLogo from '../assets/karadeniz.png';

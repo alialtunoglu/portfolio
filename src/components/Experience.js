@@ -14,29 +14,31 @@ const Experience = () => {
   const experiences = [
     {
       company: "SolonPort",
-      position: "Senior ML/AI Engineer",
-      period: "2023 - " + t('experience.present'),
+      position: "AI Research and Developer",
+      prevPosition: "AI R&D Long Term Intern",
+      period: "Ocak 2025 - " + t('experience.present'),
+      prevPeriod: "Eylül 2024 - Ocak 2025",
       location: "İstanbul, Türkiye",
-      description: "Makine öğrenmesi modelleri geliştirme ve production'a alma. MLOps süreçlerini iyileştirme ve AI entegrasyonları yapma.",
-      technologies: ["Python", "TensorFlow", "Kubernetes", "AWS"],
+      description: "Deep Q-Learning ve meta-sezgisel yöntemler ile akıllı konteyner yerleştirme sistemleri tasarlıyor, bunları ölçeklenebilir servisler hâlinde geliştirip kurumsal ASP.NET Core altyapısına entegre ediyorum.",
+      technologies: ["Python", "Flask", "Docker", "ASP.NET Core", "Deep Q-Learning", "Genetic Algorithms"],
       logo: solonportLogo
     },
     {
       company: "Sistek",
-      position: "Backend Developer",
-      period: "2022 - 2023",
-      location: "Ankara, Türkiye", 
-      description: "Django REST API geliştirme ve mikroservis mimarilerini tasarlama. PostgreSQL veritabanı optimizasyonu ve Docker containerization.",
-      technologies: ["Django", "PostgreSQL", "Docker", "Redis"],
+      position: "Makine Öğrenimi Stajyeri",
+      period: "Temmuz 2024 - Eylül 2024",
+      location: "İstanbul, Türkiye", 
+      description: "Aylık ve yıllık malzeme ihtiyacını öngören LSTM tabanlı zaman serisi modelleri geliştirdim; Docker ile konteynerleştirip Flask tabanlı web servisi üzerinden gerçek zamanlı tahmin sağladım.",
+      technologies: ["Python", "LSTM", "Flask", "Docker", "TensorFlow"],
       logo: sistekLogo
     },
     {
       company: "Darphane",
-      position: "Software Engineer Intern",
-      period: "2021 - 2022",
-      location: "Ankara, Türkiye",
-      description: "Web uygulaması geliştirme ve veritabanı tasarımı. Spring Boot ile RESTful servisler geliştirme ve test süreçlerine katkı.",
-      technologies: ["Spring Boot", "Java", "MySQL", "React"],
+      position: "Web Geliştirici Stajyeri",
+      period: "Temmuz 2023 - Ağustos 2023",
+      location: "İstanbul, Türkiye",
+      description: "PHP ve MySQL tabanlı web tabanlı bir belge yönetim sistemi geliştirdim; MERNİS entegrasyonu ile kimlik doğrulama sağladım ve sertifika damgalama süreçleri için talep takip altyapısı kurdum.",
+      technologies: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
       logo: darphaneLogo
     }
   ];
@@ -95,6 +97,13 @@ const Experience = () => {
                           <h3 className="text-xl font-bold text-white mb-1">
                             {exp.position}
                           </h3>
+                          {exp.prevPosition && (
+                            <div className="mb-2">
+                              <div className="text-sm text-gray-400 italic">
+                                Terfi edildi: {exp.prevPosition}
+                              </div>
+                            </div>
+                          )}
                           <div className="flex items-center gap-2 text-blue-400 font-medium mb-2">
                             <FaBuilding className="text-sm" />
                             {exp.company}
@@ -106,6 +115,14 @@ const Experience = () => {
                             </div>
                             <span>{exp.location}</span>
                           </div>
+                          {exp.prevPeriod && (
+                            <div className="flex items-center gap-4 text-xs text-gray-500 mt-1">
+                              <div className="flex items-center gap-1">
+                                <FaCalendar className="text-xs" />
+                                Stajyerlik: {exp.prevPeriod}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
 
@@ -154,14 +171,14 @@ const Experience = () => {
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
               <FaBuilding className="text-2xl text-blue-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">3+</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">1+</h3>
             <p className="text-gray-300">{t('experience.stats.experience')}</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl border border-purple-500/20">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
               <FaCode className="text-2xl text-purple-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">15+</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">7+</h3>
             <p className="text-gray-300">{t('experience.stats.projects')}</p>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-2xl border border-green-500/20">
