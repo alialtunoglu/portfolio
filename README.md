@@ -2,6 +2,9 @@
 
 Modern ve responsive kişisel portfolio websitesi. React, Tailwind CSS ve Framer Motion ile geliştirilmiştir.
 
+## 🌐 Live Demo
+🔗 **[https://alialtunoglu-portfolio.netlify.app](https://alialtunoglu-portfolio.netlify.app)** *(yakında)*
+
 ## 🚀 Özellikler
 
 - **Dinamik GitHub Entegrasyonu**: GitHub API ile pinlenmiş projelerinizi otomatik olarak çeker
@@ -98,16 +101,41 @@ src/
 
 ## 🚀 Deployment
 
-### Vercel (Önerilen)
+### Netlify (Önerilen)
+
+#### Hızlı Deployment (GitHub'dan):
+1. **GitHub'da repository oluşturun ve kodu push edin**
+2. **Netlify'e gidin**: [netlify.com](https://netlify.com)
+3. **"Add new site" > "Import an existing project"**
+4. **GitHub'ı seçin ve repository'nizi bulun**
+5. **Build ayarları otomatik gelecek:**
+   - Build command: `npm run build`
+   - Publish directory: `build`
+6. **Environment variables ekleyin** (Site settings > Environment variables):
+   ```
+   REACT_APP_GITHUB_TOKEN=your_github_token_here
+   REACT_APP_GITHUB_USERNAME=your_github_username
+   ```
+7. **Deploy butonuna tıklayın**
+
+#### Manuel Deployment:
+```bash
+# 1. Build oluşturun
+npm run build
+
+# 2. Netlify'de "Deploy manually" seçin
+# 3. build/ klasörünü sürükleyip bırakın
+```
+
+#### Custom Domain (Opsiyonel):
+1. Netlify Dashboard > Domain settings
+2. "Add custom domain" tıklayın
+3. Domain'inizi girin ve DNS ayarlarını yapın
+
+### Vercel
 ```bash
 npm run build
 # Vercel'e upload edin ve environment variables ekleyin
-```
-
-### Netlify
-```bash
-npm run build
-# build/ klasörünü Netlify'a yükleyin
 ```
 
 ### GitHub Pages
@@ -116,6 +144,21 @@ npm install --save-dev gh-pages
 # package.json'a homepage ekleyin
 npm run deploy
 ```
+
+## ⚙️ Environment Variables
+
+Deployment sırasında şu environment variables'ları eklemeyi unutmayın:
+
+```bash
+REACT_APP_GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
+REACT_APP_GITHUB_USERNAME=alialtunoglu
+```
+
+**GitHub Token Oluşturma:**
+1. GitHub Settings > Developer settings > Personal access tokens > Tokens (classic)
+2. "Generate new token (classic)" tıklayın
+3. İzinler: `read:user`, `repo`
+4. Token'ı kopyalayın ve deployment platformuna ekleyin
 
 ## 🔒 Güvenlik
 
